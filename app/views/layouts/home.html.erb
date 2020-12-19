@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <%= render partial: 'layouts/home/head' %>
+
+  <body style="background-color: #e8e3d5;">
+    <div class="container-scroller">
+	  
+	  <%= render partial: 'layouts/home/header' %>
+
+	  <%= yield %>
+
+	  <%= render partial: 'layouts/home/footer' %>
+	</div>
+	  <%= render partial: 'layouts/common/script' %>
+
+
+  </body>
+</html>

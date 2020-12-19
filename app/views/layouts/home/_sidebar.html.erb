@@ -1,0 +1,64 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <div class="text-center sidebar-brand-wrapper d-flex align-items-center">
+          <h3><a class="sidebar-brand brand-logo" href="index.html"><b>SRS MANAGER</b></a></h3>
+        </div>
+        <ul class="nav">
+         
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="mdi mdi-home menu-icon"></i>
+              <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+            <li class="nav-item">
+            <%= link_to edit_user_registration_path, :class => "nav-link" do %>
+              <i class="mdi mdi-account-circle menu-icon"></i>
+              <span class="menu-title">My Profile</span>
+              <% end %>
+          </li>          
+          <li class="nav-item">
+            <%= link_to residents_path, :class => "nav-link" do %>
+              <i class="mdi mdi-home-map-marker menu-icon"></i>
+              <span class="menu-title">Resident Records</span>
+              <% end %>
+          </li>
+          <li class="nav-item">
+             <%= link_to bookings_path, :class => "nav-link" do %>
+              <i class="mdi mdi-note-text menu-icon"></i>
+              <span class="menu-title">Bookings</span>
+              <% end %>
+          </li>          
+          <li class="nav-item">
+             <%= link_to complaints_path, :class => "nav-link" do %>
+              <i class="mdi mdi-message-text menu-icon"></i>
+              <span class="menu-title">Complaints</span>
+              <% end %>
+          </li>  
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+              <span class="menu-title">Reports</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item">Confidential</li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/dropdowns.html">Incident</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/ui-features/typography.html">Conditional</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+         <li class="nav-item">
+             <%= link_to destroy_user_session_path , method: :delete, :class => "nav-link" do %>
+              <i class="mdi mdi-logout menu-icon"></i>
+              <span class="menu-title">Logout</span>
+              <% end %>
+          </li>  
+          
+        </ul>
+      </nav>
