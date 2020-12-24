@@ -1,0 +1,20 @@
+ <%= form_with(model: @complaint, remote: true , class: "forms-sample") do |f| %>
+
+  <div class="form-group">
+    <label for="exampleInputComplaints">Complaints</label>
+    <%= f.text_field :complaint, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"nature" %>                      </div>
+  <div class="form-group">
+    <label for="exampleInputNature">Nature of the Compaints</label>
+    <%= f.text_field :nature, autofocus: true, autocomplete: "name", :class => "form-control", placeholder:"Nature" %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputNature">Action Taken</label>
+   <%= f.text_field :action, autofocus: true, autocomplete: "action", :class => "form-control", placeholder:"Action" %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputNature">Methd of communication of the outcome of the complaints</label>
+    <%= f.text_field :method, autofocus: true, autocomplete: "method", :class => "form-control", placeholder:"Method" %>
+  </div>
+  <button type="submit" class="btn btn-primary mr-2"> Submit </button>
+  <button class="btn btn-light">Cancel</button>
+<% end %>   

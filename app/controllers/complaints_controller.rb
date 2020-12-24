@@ -9,7 +9,7 @@ class ComplaintsController < BaseController
    	get_collection
 	end
 	
-  	def new
+  def new
     new_complaint
    	@page_title = "Complaints | New Complaint"   
 	end
@@ -27,7 +27,7 @@ class ComplaintsController < BaseController
 	 	@complaint=Complaint.new(permitted_params)
     if @complaint.valid?
       @complaint.save
-      set_notification(true, I18n.t('status.success'), I18n.t('success.created', item: "Complaints"))
+      redirect_to complaints_path
 	 	else
       message = I18n.t('errors.failed_to_create', item: "Complaints")     
       set_notification(false, I18n.t('status.error'), message)
@@ -38,7 +38,7 @@ class ComplaintsController < BaseController
     @complaint=Complaint.find(params[:id])
 	  @complaint.update(permitted_params)
 	  if @complaint.save
-      set_notification(true, I18n.t('status.success'), I18n.t('success.updated', item: "Complaint"))
+      redirect_to complaints_path
 		else
       message = I18n.t('errors.failed_to_create', item: "Complaints")     
       set_notification(false, I18n.t('status.error'), message)
@@ -58,7 +58,7 @@ class ComplaintsController < BaseController
 	private
 
 	def permitted_params
-    params.require(:complaints).permit(:complaint, :nature, :action, :method)
+    params.require(:complaint).permit(:complaint, :nature, :action, :method)
 	end
 
   def new_complaint
