@@ -11,7 +11,7 @@
             </a>
           </li>
             <li class="nav-item">
-            <%= link_to edit_user_registration_path, :class => "nav-link" do %>
+            <%= link_to home_path(current_user), :class => "nav-link" do %>
               <i class="mdi mdi-account-circle menu-icon"></i>
               <span class="menu-title">My Profile</span>
               <% end %>
@@ -22,6 +22,13 @@
               <span class="menu-title">Resident Records</span>
               <% end %>
           </li>
+           <li class="nav-item">
+            <%= link_to residents_agreements_path, :class => "nav-link" do %>
+              <i class="mdi mdi-home-map-marker menu-icon"></i>
+              <span class="menu-title">Resident Agreements</span>
+              <% end %>
+          </li>
+          
           <li class="nav-item">
              <%= link_to bookings_path, :class => "nav-link" do %>
               <i class="mdi mdi-note-text menu-icon"></i>
@@ -33,7 +40,13 @@
               <i class="mdi mdi-message-text menu-icon"></i>
               <span class="menu-title">Complaints</span>
               <% end %>
-          </li>  
+          </li> 
+           <li class="nav-item">
+             <%= link_to srs_referals_path, :class => "nav-link" do %>
+              <i class="mdi mdi-file-multiple menu-icon"></i>
+              <span class="menu-title">SRS Referal</span>
+              <% end %>
+          </li>   
 
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
@@ -43,7 +56,7 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item">Confidential</li>
+                <li class="nav-item" ><a class="nav-link" href="pages/ui-features/dropdowns.html">Confidential</a></li>
                 <li class="nav-item">
                   <a class="nav-link" href="pages/ui-features/dropdowns.html">Incident</a>
                 </li>

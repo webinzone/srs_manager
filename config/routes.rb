@@ -5,7 +5,12 @@ Rails.application.routes.draw do
 	end
   resources :home 
   resources :residents 
+  resources :residents_agreements 
+
   resources :complaints 
   resources :bookings 
+
+  resources :srs_referals 
+  resources :profile 
 
 end
