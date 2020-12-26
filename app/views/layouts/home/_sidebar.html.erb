@@ -10,6 +10,12 @@
               <span class="menu-title">Dashboard</span>
               <% end %>
           </li>
+          <li class="nav-item">
+            <%= link_to menu_home_index_path, :class => "nav-link" do %>
+              <i class="mdi mdi-menu menu-icon"></i>
+              <span class="menu-title">Menu</span>
+              <% end %>
+          </li>
           
             <li class="nav-item">
             <%= link_to home_path(current_user), :class => "nav-link" do %>
@@ -17,7 +23,7 @@
               <span class="menu-title">My Profile</span>
               <% end %>
           </li>          
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <%= link_to residents_path, :class => "nav-link" do %>
               <i class="mdi mdi-home-map-marker menu-icon"></i>
               <span class="menu-title">Resident Records</span>
@@ -35,12 +41,12 @@
               <i class="mdi mdi-note-text menu-icon"></i>
               <span class="menu-title">Bookings</span>
               <% end %>
-          </li>          
+          </li>       
           <li class="nav-item">
              <%= link_to complaints_path, :class => "nav-link" do %>
               <i class="mdi mdi-message-text menu-icon"></i>
               <span class="menu-title">Complaints</span>
-              <% end %>
+              <% end %>-->
           </li> 
            <li class="nav-item">
              <%= link_to srs_referals_path, :class => "nav-link" do %>
@@ -49,7 +55,7 @@
               <% end %>
           </li>   
 
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="mdi mdi-crosshairs-gps menu-icon"></i>
               <span class="menu-title">Reports</span>
@@ -66,7 +72,7 @@
                 </li>
               </ul>
             </div>
-          </li>
+          </li>-->
          <li class="nav-item">
              <%= link_to destroy_user_session_path , method: :delete, :class => "nav-link" do %>
               <i class="mdi mdi-logout menu-icon"></i>

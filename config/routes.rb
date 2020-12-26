@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   devise_scope :user do
 	  root 'devise/sessions#new'
 	end
-  resources :home 
+  resources :home do
+    collection do
+      get :menu
+    end
+  end 
   resources :residents 
   resources :residents_agreements 
 

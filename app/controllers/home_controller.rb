@@ -6,6 +6,8 @@ class HomeController < BaseController
 
 	def index	
 	end
+	def menu	
+	end
 
 	def show	
 	  @user = User.find(params[:id])
