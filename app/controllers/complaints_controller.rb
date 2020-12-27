@@ -25,6 +25,7 @@ class ComplaintsController < BaseController
   
   def create
 	 	@complaint=Complaint.new(permitted_params)
+    @complaint.user_id=current_user.id      
     if @complaint.valid?
       @complaint.save
       redirect_to complaints_path

@@ -1,23 +1,12 @@
 <div class="main-panel">
-          <div class="content-wrapper pb-0">
-            <div class="page-header flex-wrap">
-              <h3 class="mb-0"> MENU <span class="pl-0 h6 pl-sm-2 text-muted d-inline-block">SRS MANAGER APPLICATION</span>
-              </h3>
-              <div class="d-flex">
-                <button type="button" class="btn btn-sm bg-white btn-icon-text border">
-                  <i class="mdi mdi-email btn-icon-prepend"></i> Email </button>
-                <button type="button" class="btn btn-sm bg-white btn-icon-text border ml-3">
-                  <i class="mdi mdi-printer btn-icon-prepend"></i> Print </button>
-                <button type="button" class="btn btn-sm ml-3 btn-success"> Add User </button>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12 grid-margin stretch-card">
+
+            <div class="row" style="width: 1000px; padding: 10px; ">
+              <div class="col-12 grid-margin stretch-card" >
 
                <div class="card" style="background-color: #475CB8;">
                  <div class="card-body">
                   </div>
-                  <div class="row" style="padding-left: 20px;">
+                  <div class="row" style="padding-left: 30px;">
                     <div class="col-3 grid-margin stretch-card" style="padding-left: 20px;">
                     <div class="row">
                       <div class="card" style="background-color: #475CB8;height: 280px;width: 220px;" >
@@ -63,9 +52,10 @@
                      </div>
 
                     </div>
-                    <div class="col-3 grid-margin stretch-card" style="padding-left: 5px;height: 400px;">
+                    <div class="col-3 grid-margin stretch-card" >
+                      <div class="row" style="padding-left: 15px;">
 
-                      <div class="card" style="background-color: #475CB8;" style="padding: 10px;height: 200px;">
+                      <div class="card" style="background-color: #475CB8;" style="padding: 10px;height: px;">
                         <div class="card-header"  style="color: white;background-color: #996600;">
                           Office
                         </div>
@@ -86,12 +76,11 @@
                         </u></p>
                       </div>
                         
-                     </div>
+                     </div>     
+                         <div class="col-3 grid-margin stretch-card" style="padding-left: 20px;">
+                      <div class="row" style="padding-left: 20px;">
 
-                    </div>
-                    <div class="col-3 grid-margin stretch-card" style="padding-left: 15px;">
-                      <div class="row">
-                        <div class="card" style="background-color: #475CB8;height: 180px;width: 230px;" >
+                      <div class="card" style="background-color: #475CB8;height: 200px;width: 230px;" >
                         <div class="card-header"  style="color: white;background-color: #996600;">
                           Apppintments
                         </div>
@@ -101,13 +90,13 @@
                         <p class="card-description"> <u> <%= link_to "Doctor", residents_path ,:style => "color :white;" %>
                         </u></p>
                         <p class="card-description"> <u> <%= link_to "Recurring Apps", residents_agreements_path ,:style => "color :white;" %>
-                        </u></p>
+                        </u></p>   
                         
                      </div>
-                   </div>
-                 </div>
-                      <div class="row" style="padding: 5px;height: 200px; ">
-                        <div class="card" style="background-color: #475CB8;height: 200px; width: 230px;" >
+                        
+                     </div><br>
+                     <div class="row" style="padding-top: 20px;padding-left: 15px;">
+                        <div class="card" style="background-color: #475CB8; height: 200px; width: 230px;" >
                         <div class="card-header"  style="color: white;background-color: #996600;">
                           Medication
                         </div>
@@ -119,65 +108,18 @@
                         <p class="card-description"> <u> <%= link_to "Non Prescribed", residents_agreements_path ,:style => "color :white;" %>
                         </u></p>
                         
-                     </div> 
-                      </div>
-
-                      </div>
-                        
-
-                    </div><br>
-                     
-                        
-
-                    <div class="col-3 grid-margin stretch-card" style="padding-right: 20px;padding-left: 5px;">
-
-                      <div class="card" style="background-color: #475CB8;height: 270px;width: 300px; " >
-                        <div class="card-header"  style="color: white;background-color: #996600;">
-                          Staff
-                        </div>
-                        <div class="card-body" style="align-items: center;">
-                        <p class="card-description"> <u> <%= link_to "Read Handover", residents_path ,:style => "color :white;" %>
-                        </u></p>
-                        <p class="card-description"> <u> <%= link_to "Create Handover", residents_path ,:style => "color :white;" %>
-                        </u></p>
-                        <p class="card-description"> <u> <%= link_to "Create Private Messages", residents_agreements_path ,:style => "color :white;" %>
-                        </u></p>
-                        <p class="card-description"> <u> <%= link_to "View Roaster", residents_agreements_path ,:style => "color :white;" %>
-                        </u></p>
                         
                      </div>
+                   </div><br>
                         
-                     </div>
+              
+
+                    </div>
 
                     </div>
             
-                  </div>
-                  <div class="row">
-                    <!--<div class="col-3 grid-margin stretch-card" style="padding-left: 20px;">
-
-                      <div class="card" style="background-color: #475CB8;height: 300px;" >
-                        <div class="card-header"  style="color: white;background-color: #996600;">
-                          Charts
-                        </div>
-                        <div class="card-body" style="align-items: center;">
-                        <p class="card-description"> <u> <%= link_to "Behaviour Charts", residents_path ,:style => "color :white;" %>
-                        </u></p>
-                        <p class="card-description"> <u> <%= link_to "Bowel Chart", residents_path ,:style => "color :white;" %>
-                        </u></p>
-                        <p class="card-description"> <u> <%= link_to "Turn & Reposition Log", residents_agreements_path ,:style => "color :white;" %>
-                        </u></p>
-                        <p class="card-description"> <u> <%= link_to "Wieght-BSL's-BP", residents_path ,:style => "color :white;" %>
-                        </u></p>
-                        <p class="card-description"> <u> <%= link_to "Wound Register", residents_path ,:style => "color :white;" %>
-                        </u></p>
-                      </div>
-                        
-                     </div>
-
-                    </div>-->
-                    <div class=" grid-margin stretch-card" style="padding-left: 5px;">
-
-                      <div class="card" style="background-color: #475CB8;padding: 10px;height: 300px;width: 470px;">
+                  </div><br><br>
+                     <div class="card" style="background-color: #475CB8; height: 200px;width: 400px;">
                         <div class="card-header"  style="color: white;background-color: #996600;">
                           Admin
                         </div>
@@ -202,15 +144,37 @@
             
                             
                           </div>
+
                         
                       </div>
-                        
-                     </div>
+                    </div>
 
                     </div>
-                     <div class="col-3 grid-margin stretch-card" style="padding-right: 5px;padding-left: 15px;">
 
-                      <div class="card" style="background-color: #475CB8;height: 350px;padding: 10px; " >
+               
+
+                    <div class="col-3 grid-margin stretch-card" style="padding-left: 30px;">
+                      <div class="row" style="padding-right: 20px;padding-left: 50px;">
+
+                      <div class="card" style="background-color: #475CB8;height: 270px;width: 215px; " >
+                        <div class="card-header"  style="color: white;background-color: #996600;">
+                          Staff
+                        </div>
+                        <div class="card-body" style="align-items: center;">
+                        <p class="card-description"> <u> <%= link_to "Read Handover", residents_path ,:style => "color :white;" %>
+                        </u></p>
+                        <p class="card-description"> <u> <%= link_to "Create Handover", residents_path ,:style => "color :white;" %>
+                        </u></p>
+                        <p class="card-description"> <u> <%= link_to "Create Private Messages", residents_agreements_path ,:style => "color :white;" %>
+                        </u></p>
+                        <p class="card-description"> <u> <%= link_to "View Roaster", residents_agreements_path ,:style => "color :white;" %>
+                        </u></p>
+                        
+                     </div>
+                        
+                     </div><br>
+                     <div class="row" style="padding-top: 20px;padding-left: 15px;">
+                        <div class="card" style="background-color: #475CB8;height: 350px;width: 215px; " >
                         <div class="card-header"  style="color: white;background-color: #996600;">
                           Reports
                         </div>
@@ -229,20 +193,23 @@
                         </u></p>
                         
                      </div>
+                   </div><br>
                         
                      </div>
 
                     </div>
-                    
+
+                    </div>
+            
                   </div>
+ 
                     
-            </div>
+            </div><br><br>
             </div>
             </div>
           </div>
 
           
                 <!--browser stats ends-->
-              </div>
-            </div>
+             
           </div>

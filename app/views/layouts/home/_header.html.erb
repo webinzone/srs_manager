@@ -17,7 +17,7 @@
             <div class="tiles dark"></div>
           </div>
         </div>
-        <nav class="navbar col-lg-12 col-12 p-lg-0 fixed-top d-flex flex-row">
+        <nav class="navbar col-lg-12 col-12 p-lg-0 fixed-top d-flex flex-row" style="color: white;">
           <div class="navbar-menu-wrapper d-flex align-items-stretch justify-content-between">
             <a class="navbar-brand brand-logo-mini align-self-center d-lg-none" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
             <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
@@ -111,11 +111,11 @@
               <li class="nav-item nav-profile dropdown border-0">
                 <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-toggle="dropdown">
                   <img class="nav-profile-img mr-2" alt="" src="assets/images/faces/face1.jpg" />
-                  <span class="profile-name"><%=current_user.email.split('@')[0] %></span>
+                  <span class="profile-name" style="color: white;"><%=current_user.email.split('@')[0] %></span>
                 </a>
-                <div class="dropdown-menu navbar-dropdown w-100" aria-labelledby="profileDropdown">
+                <div class="dropdown-menu navbar-dropdown w-100" aria-labelledby="profileDropdown" style="color: white;">
                   <%= link_to edit_user_registration_path, :class => "dropdown-item" do %>
-                    <i class="mdi mdi-account-circle mr-2 text-success"></i>
+                    <i class="mdi mdi-account-circle mr-2 text-success" ></i>
                     Profile
                   <% end %>
                    <%= link_to  destroy_user_session_path , :class => "dropdown-item", method: :delete do%>

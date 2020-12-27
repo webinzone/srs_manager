@@ -29,7 +29,9 @@
     <tbody>
       
         <tr id='complaints_ROW_<%= @complaint.id %>'>
-          
+         <td>
+            <span><%= @complaint.id %></span>
+          </td> 
           <td>
             <span><%= @complaint.try(:complaint) %></span>
           </td>
