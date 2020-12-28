@@ -1,0 +1,59 @@
+<div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><b>Users</b></h3>
+               <div class="col-md-8">
+            
+              </div>
+             
+            </div>
+           <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                   
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Pwd</th>
+                           
+                            <th>Created_at</th>
+                            <th style="width: 500px;align-content: center;">Action</th>
+                          </tr>
+                        </thead>
+                        
+    <tbody>
+      <% @users.each_with_index do |user, i| %>
+        <tr id='users_ROW_<%= user.id %>'>
+          <td>
+            <span><%= i+1 %></span>
+          </td>
+          <td>
+            <span><%= user.name %></span>
+          </td>
+          <td>
+            <span><%= user.try(:email) %></span>
+          </td>
+         <td>
+            <span><%= user.try(:password) %></span>
+          </td>
+          <td>
+            <span><%= user.created_at.in_time_zone("Asia/Muscat").strftime('%d %B %Y, %H:%M') if user.created_at %></span>
+          </td>
+          
+        </tr>
+      <% end %>
+    </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+

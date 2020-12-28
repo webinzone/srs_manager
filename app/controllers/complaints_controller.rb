@@ -30,8 +30,8 @@ class ComplaintsController < BaseController
       @complaint.save
       redirect_to complaints_path
 	 	else
-      message = I18n.t('errors.failed_to_create', item: "Complaints")     
-      set_notification(false, I18n.t('status.error'), message)
+      redirect_to home_index_path
+
 	 	end
 	end
 
@@ -41,15 +41,18 @@ class ComplaintsController < BaseController
 	  if @complaint.save
       redirect_to complaints_path
 		else
-      message = I18n.t('errors.failed_to_create', item: "Complaints")     
-      set_notification(false, I18n.t('status.error'), message)
+      redirect_to home_index_path
+
 		end
 	end
 	
   def destroy
-		@complaint=Complaint.find(params[:id])
-		@complaint.destroy
-		redirect_to @complaint
+		@complaint = Complaint.find(params[:id])
+    if @complaint.destroy
+      redirect_to complaints_path
+    else
+      redirect_to home_index_path
+    end
   end
     
   # --------------

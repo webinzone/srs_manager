@@ -10,14 +10,14 @@
 		<div class="card">
                   <div class="card-body">
                     <p class="card-description">Update Profile</p>
-                    <form class="forms-sample">
+            <%= form_with( remote: true , class: "forms-sample", url: users_home_index_path(current_user), method: :put) do |f| %>
                       <div class="form-group">
                         <label for="exampleInputname">Name</label>
-                        <input type="text" class="form-control" id="exampleInputname" value="<%=@user.name %>" />
+                     <%= f.text_field :name, autofocus: true, autocomplete: "user", :class => "form-control", value:@user.name %>                      
                       </div>
                        <div class="form-group">
                         <label for="exampleaddress">Email Address</label>
-                        <input type="text" class="form-control" id="exampleaddress" value="<%= @user.email %>" />
+                        <%= f.text_field :email, autofocus: true, autocomplete: "Email", :class => "form-control", value:@user.email %>
                       </div>
                       <div class="form-group">
                         <label for="exampleInputtelephone">Password</label>
@@ -25,8 +25,7 @@
                       </div>
 											<button type="submit" class="btn btn-primary mr-2"> Update </button>
                       <button class="btn btn-light">Cancel</button>                      
-                    </form>
-                  </div>
+<% end %>                     </div>
                 </div>
               </div>
             </div>
