@@ -15,6 +15,7 @@ class ComplaintsController < BaseController
 	end
 	
 	def show
+    @page_title = "Complaint"
 		@complaint=Complaint.find(params[:id])
 	end
 	
@@ -62,7 +63,7 @@ class ComplaintsController < BaseController
 	private
 
 	def permitted_params
-    params.require(:complaint).permit(:complaint, :nature, :action, :method)
+    params.require(:complaint).permit(:complaint, :nature, :action, :method, :user_name)
 	end
 
   def new_complaint

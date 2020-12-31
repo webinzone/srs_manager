@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_17_063703) do
+ActiveRecord::Schema.define(version: 2020_12_31_092252) do
 
   create_table "complaints", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -20,7 +20,22 @@ ActiveRecord::Schema.define(version: 2020_12_17_063703) do
     t.string "method", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_name"
     t.index ["user_id"], name: "index_complaints_on_user_id"
+  end
+
+  create_table "support_plans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "user_name", default: "", null: false
+    t.string "Hygiene", default: "", null: false
+    t.string "nutrition", default: "", null: false
+    t.string "health_care", default: "", null: false
+    t.string "medication", default: "", null: false
+    t.string "social_contact", default: "", null: false
+    t.string "behaviour", default: "", null: false
+    t.string "goals", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "mobility"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

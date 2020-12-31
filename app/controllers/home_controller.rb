@@ -8,6 +8,12 @@ class HomeController < BaseController
 	end
 	def menu	
 	end
+   
+
+	def invoice
+		
+	end
+
 	def users
 		get_collection
 	end

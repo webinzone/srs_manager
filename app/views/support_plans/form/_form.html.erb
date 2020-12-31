@@ -1,0 +1,45 @@
+      <%= form_with(model: @support_plan, remote: true , class: "forms-sample") do |f| %>
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">Name</label>
+                         <%= f.text_field :user_name, autofocus: true, :class => "form-control", placeholder:"Personal Hygiene" %>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">Personal Hygiene</label>
+                         <%= f.text_field :Hygiene, autofocus: true, :class => "form-control", placeholder:"Personal Hygiene" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputEating">Eating and Nutrition </label>
+                        <%= f.text_field :nutrition, autofocus: true, :class => "form-control", placeholder:"Eating and Nutrition" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleInputMobility">Mobility</label>
+                         <%= f.text_field :mobility, autofocus: true, :class => "form-control", placeholder:"Mobility" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputHealth">Health Care</label>
+                        <%= f.text_field :health_care, autofocus: true, :class => "form-control", placeholder:"Health Care" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleSelectMedication">Medication</label>
+                        <%= f.text_field :medication, autofocus: true, :class => "form-control", placeholder:"Medication" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleSelectSocial">Social Contact and Emotional wellbeing</label>
+                         <%= f.text_field :social_contact, autofocus: true, :class => "form-control", placeholder:"Social Contact and Emotional wellbeing" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleSelectBehaviour">Behaviour</label>
+                         <%= f.text_field :behaviour, autofocus: true, :class => "form-control", placeholder:"Behaviour" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Goals/Finances/Other</label>
+                         <%= f.text_field :goals, autofocus: true, :class => "form-control", placeholder:"Goals/Finances/Other" %>
+                      </div>
+
+                      
+                      <button type="submit" class="btn btn-primary mr-2"> Submit </button>
+                      <button class="btn btn-light">Cancel</button>
+                    <% end %>
+
+                  

@@ -1,0 +1,4 @@
+class SupportPlan < ApplicationRecord
+ 
+    
+end

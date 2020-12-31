@@ -1,0 +1,117 @@
+<div class="main-panel">
+        <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><b>Support Plans</b></h3>
+               <div class="col-md-4">
+            <%= link_to '+ Add New Support Plan', new_support_plan_path, :class =>"btn btn-success", :remote => true %>
+  
+              </div>
+             
+            </div>
+           <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+              	<div class="card">
+                  <div class="card-body">
+     				 <form class="forms-sample">
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">Name</label>
+                      </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @support_plan.user_name %></label>
+
+                      </div>
+                     </div>
+						<div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">Personal Hygiene</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @support_plan.Hygiene %></label>
+                         
+                      </div>
+                  </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputEating">Eating and Nutrition </label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @support_plan.nutrition %></label>
+                      </div>
+                      </div>	
+                      <div class="row">
+                      <div class="col-3">
+                       <div class="form-group">
+                        <label for="exampleInputMobility">Mobility</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @support_plan.mobility %></label>
+  					</div>
+  					</div>
+  					<div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputHealth">Health Care</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @support_plan.health_care %></label>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectMedication">Medication</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @support_plan.medication %></label>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectSocial">Social Contact &<br> Emotional wellbeing</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @support_plan.social_contact %></label>
+                        </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectBehaviour">Behaviour</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @support_plan.behaviour %></label>
+   					 </div>
+   					 </div>
+   					 <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Goals/Finances/Other</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @support_plan.goals %></label>
+          				 </div>
+                          </div>
+                      
+                      
+                     </form>
+                  </div>
+              </div>
+
+              </div>
+          </div>
+      </div>
+  </div>

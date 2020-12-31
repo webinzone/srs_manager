@@ -2,60 +2,39 @@
           <div class="content-wrapper">
             <div class="page-header">
               <h3 class="page-title"><b>Complaints</b></h3>
-               <div class="col-md-8">
-            <%= link_to '+ Add New Complaint', new_complaint_path, :class =>"btn btn-success", :remote => true %>
+               <div class="col-md-3">
+            <b><%= link_to '+New Complaint', new_complaint_path, :class =>"btn btn-success", :remote => true %></b>
   
               </div>
              
             </div>
            <div class="row">
               <div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                   
-                    <div class="table-responsive">
-                      <table class="table">
-                        <thead>
-                          <tr>
-                            <th>ID</th>
-                            <th>Complaint</th>
-                            <th>Nature</th>
-                            <th>Action</th>
-                            <th>Method</th>
-                            <th>Created_at</th>
-                          </tr>
-                        </thead>
-                        
-    <tbody>
-      
-        <tr id='complaints_ROW_<%= @complaint.id %>'>
-         <td>
-            <span><%= @complaint.id %></span>
-          </td> 
-          <td>
-            <span><%= @complaint.try(:complaint) %></span>
-          </td>
-          <td>
-            <span><%= @complaint.try(:nature) %></span>
-          </td>
+               
+    <div class="card" style="width: 25rem; background-color: #b3f0ff;">
+        <div class="card-header">
+          Complaint By : <b><%= @complaint.user_name %></b>
           
-          <td>
-            <span><%= @complaint.try(:action) %></span>
-          </td>
-         
-          <td>
-            <span><%= @complaint.try(:method) %></span>
-          </td>
-          <td>
-            <span><%= @complaint.created_at.in_time_zone("Asia/Muscat").strftime('%d %B %Y, %H:%M') if @complaint.created_at %></span>
-          </td>
+        </div>
+       <div class="card-body">
+        <p class="card-text">Complaint : <%= @complaint.try(:complaint) %></p>
+        <p class="card-text">Nature&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; <%= @complaint.try(:nature) %></p>
+        <p class="card-text">Action &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; <%= @complaint.try(:action) %></p>
+        <p class="card-text">Method &nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; <%= @complaint.try(:method) %></p>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+      <div class="col-6">
+        <a href="#" class="card-link"><%= @complaint.created_at.in_time_zone("Asia/Muscat").strftime('%d %B %Y, %H:%M') %></a>
+      </div>
+        <div class="col-2">
+          <%= button_to complaint_path(@complaint), :method => :delete, :remote => true, data: {confirm: "Are you sure you want to delete this?"}, :class => "btn btn-primary" do %><i class="fa fa-trash"></i><% end %>
+          </div>
+          </div>
           
-        </tr>
-    </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
+       </div>
+      </div>
+
               </div>
           </div>
         </div>

@@ -1,55 +1,60 @@
 <div class="main-panel">
           <div class="content-wrapper">
             <div class="page-header">
-              <h3 class="page-title"><b>SUPPORT PLAN</b></h3>
+              <h3 class="page-title"><b>Support Plans</b></h3>
+               <div class="col-md-4">
+            <%= link_to '+ Add New Support Plan', new_support_plan_path, :class =>"btn btn-success", :remote => true %>
+  
+              </div>
              
             </div>
-            <div class="row">
-         <div class="col-12 grid-margin stretch-card">
+           <div class="row">
+              <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
-                    <p>Date Of Birth:</p> <p>
-                    <form class="forms-sample">
-                      <div class="form-group">
-                        <label for="exampleInputPersonal">Personal Hygiene</label>
-                        <input type="text" class="form-control" id="exampleInputPersonal" placeholder="Personal Hygiene" />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputEating">Eating and Nutrition </label>
-                        <input type="text" class="form-control" id="exampleInputEating" placeholder="Eating and Nutrition" />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputHealth">Health Care</label>
-                        <input type="text" class="form-control" id="exampleInputHealth" placeholder="Health Care" />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleSelectMedication">Medication</label>
-                        <input type="text" class="form-control" id="exampleInputMedication" placeholder="Medication" />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleSelectSocial">Social Contact and Emotional wellbeing</label>
-                        <input type="text" class="form-control" id="exampleInputSocial" placeholder="Social Contact and Emotional wellbeing" />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleSelectBehaviour">Behaviour</label>
-                        <input type="text" class="form-control" id="exampleInputBehaviour" placeholder="Behaviour" />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleSelectGoal">Goals/Finances/Other</label>
-                        <input type="text" class="form-control" id="exampleInputGoal" placeholder="Goals/Finances/Other" />
-                      </div>
-
-                      
-                      <button type="submit" class="btn btn-primary mr-2"> Submit </button>
-                      <button class="btn btn-light">Cancel</button>
-                    </form>
+                   
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>#</th>
+                            <th>support_plans By</th>
+                            <th>Created_at</th>
+                            <th style="align-content: center;">Action</th>
+                            <th></th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        
+    <tbody>
+      <% @support_plans.each_with_index do |support_plan, i| %>
+        <tr id='support_plans_ROW_<%= support_plan.id %>'>
+          <td>
+            <span><%= i+1 %></span>
+          </td>
+          <td>
+            <span><%= support_plan.user_name %></span>
+          </td>
+          
+          <td>
+            <span><%= support_plan.created_at.in_time_zone("Asia/Muscat").strftime('%d %B %Y, %H:%M') if support_plan.created_at %></span>
+          </td>
+          <td>
+            <%= button_to support_plan_path(support_plan),:method => :get, :class => "btn-success" do %><i class="fa fa-eye"></i><% end %></td>
+            <td><%= button_to edit_support_plan_path(support_plan), :method => :get, :remote => true, :class => "btn-success" do %><i class="fa fa-edit"></i><% end %></td>
+            <td><%= button_to support_plan_path(support_plan), :method => :delete, :remote => true, data: {confirm: "Are you sure you want to delete this?"}, :class => "btn-success" do %><i class="fa fa-trash"></i><% end %>
+           
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
-          </p>
+          </div>
+        </div>
       </div>
-  </div>
-</div>
-</div>
-</div>
-</div>
+
+
