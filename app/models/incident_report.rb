@@ -1,0 +1,4 @@
+class IncidentReport < ApplicationRecord
+ 
+    
+end

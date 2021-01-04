@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :support_plans 
   resources :complaints 
   resources :bookings 
-  resources :incidents 
+  resources :incident_reports 
   resources :srs_referals 
   resources :profile 
   resources :transfer_details 

@@ -1,0 +1,76 @@
+ <%= form_with(model: @incident_report, remote: true , class: "forms-sample") do |f| %>
+      <div class="form-group">
+    <label for="exampleInputComplaints">Name</label>
+    <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name", :class => "form-control", placeholder:"Name" %>           
+   </div>
+      <div class="form-group" >
+     	  <label for="exampleInputother">Type of Incident</label><br>
+
+        <div class="form-check" style="padding-left: 20px;">
+
+        	<div class="row">
+
+                <div class="col-3">
+                  <%#= f.radio_button :type, :class => "form-check-input" %>  <%#= f.label :type, 'Assault', :class => "form-check-label" %>
+                  <%= f.radio_button :incident_type, 'Assault', :class => "form-check-input" %> 
+                  <%= f.label :incident_type, 'Assault', :value => 'Assault' , :class => "form-check-label"%>
+                  <%= f.radio_button :incident_type, 'Fail', :class => "form-check-input" %> 
+                  <%= f.label :incident_type, 'Fail', :value => 'Fail' , :class => "form-check-label"%>
+                </div>
+                <div class="col-3">
+                  <%= f.radio_button :incident_type, 'Illness', :class => "form-check-input" %> 
+                  <%= f.label :incident_type, 'Illness', :value => 'Illness' , :class => "form-check-label"%>
+                  <%= f.radio_button :incident_type, 'Meds', :class => "form-check-input" %> 
+                  <%= f.label :incident_type, 'Meds', :value => 'Meds' , :class => "form-check-label"%>
+              </div>
+              <div class="col-3">
+                  <%= f.radio_button :incident_type, 'Injury', :class => "form-check-input" %> 
+                  <%= f.label :incident_type, 'Injury', :value => 'Injury' , :class => "form-check-label"%>
+                  <%= f.radio_button :incident_type, 'Missing Res', :class => "form-check-input" %> 
+                  <%= f.label :incident_type, 'Missing Res', :value => 'Missing Res' , :class => "form-check-label"%>
+                 </div>
+                <div class="col-3">
+                  <%= f.radio_button :incident_type, 'Fire', :class => "form-check-input" %> 
+                  <%= f.label :incident_type, 'Fire', :value => 'Fire' , :class => "form-check-label"%>
+                  <%= f.radio_button :incident_type, 'Unexpected Death', :class => "form-check-input" %> 
+                  <%= f.label :incident_type, 'Unexpected Death', :value => 'Unexpected Death' , :class => "form-check-label"%>
+              </div>
+            </div>
+              </div>
+            </div>
+      <div class="form-group">
+        <label for="exampleInputother">Other</label>
+         <%= f.text_field :other_type, autofocus: true, :class => "form-control", placeholder:"Other" %>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputincident4">Description of incident</label>
+         <%= f.text_field :description, autofocus: true, :class => "form-control", placeholder:"Description of incident" %>
+      </div>
+      <div class="form-group">
+        <label for="exampleSelectaction">Action Taken</label>
+         <%= f.text_field :action, autofocus: true, :class => "form-control", placeholder:"Action Taken" %>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputstaff">Staff Member</label>
+         <%= f.text_field :staff, autofocus: true, :class => "form-control", placeholder:"Staff Member" %>
+      </div>
+       <div class="form-group">
+        <label for="exampleInputfollow">Follow Up/Notes</label>
+         <%= f.text_field :follow_notes, autofocus: true, :class => "form-control", placeholder:"Follow Up/Notes" %>
+      </div>
+       <div class="form-group">
+        <label for="exampleInputupstaff">Follow Up staff</label>
+        <%= f.text_field :follow_staff, autofocus: true, :class => "form-control", placeholder:"Follow Up staff" %>
+      </div>
+      <p class="card-description">Persons Notified</p>
+       <div class="form-group">
+        <label for="exampleInputother1">Other</label>
+         <%= f.text_field :person_other, autofocus: true, :class => "form-control", placeholder:"Other" %>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputtime">Time/Date of notification</label>
+        <%= f.text_field :notify_date, autofocus: true, :class => "form-control", placeholder:"Time/Date of notification" %>
+      </div>
+      <button type="submit" class="btn btn-primary mr-2"> Submit </button>
+      <button class="btn btn-light">Cancel</button>
+<% end %>  

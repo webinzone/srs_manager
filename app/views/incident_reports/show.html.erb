@@ -1,0 +1,128 @@
+<div class="main-panel">
+        <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><b>Incident Report</b></h3>
+               <div class="col-md-4">
+           
+              </div>
+             
+            </div>
+           <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+              	<div class="card">
+                  <div class="card-body">
+     				 <form class="forms-sample">
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">Name</label>
+                      </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @incident_report.user_name %></label>
+
+                      </div>
+                     </div>
+						<div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">Type of Incident</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @incident_report.incident_type %></label>
+                      </div>
+                      </div>  
+                         
+                      
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputEating">Other Type</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @incident_report.other_type %></label>
+                      </div>
+                      </div>	
+                      <div class="row">
+                      <div class="col-3">
+                       <div class="form-group">
+                        <label for="exampleInputMobility">Description of incident</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @incident_report.description %></label>
+  					</div>
+  					</div>
+  					<div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputHealth">Action Taken</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @incident_report.action %></label>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectMedication">Staff Member</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @incident_report.staff %></label>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectSocial">Follow Up/Notes</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @incident_report.follow_notes %></label>
+                        </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectBehaviour">Follow Up staff</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @incident_report.follow_staff %></label>
+   					 </div>
+   					 </div>
+   					 <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Persons Notified</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @incident_report.person_other %></label>
+          				 </div>
+                          </div>
+                          <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Time/Date of notification</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @incident_report.notify_date %></label>
+                   </div>
+                          </div>
+                      
+                      
+                     </form>
+                  </div>
+              </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
