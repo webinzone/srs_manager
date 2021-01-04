@@ -10,7 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_02_060716) do
+ActiveRecord::Schema.define(version: 2021_01_04_113032) do
+
+  create_table "bookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "user_name", default: "", null: false
+    t.string "book_from", default: "", null: false
+    t.string "book_to", default: "", null: false
+    t.string "room", default: "", null: false
+    t.string "bed", default: "", null: false
+    t.string "payment", default: "", null: false
+    t.string "fee", default: "", null: false
+    t.string "dob", default: "", null: false
+    t.string "age", default: "", null: false
+    t.string "contact", default: "", null: false
+    t.string "address", default: "", null: false
+    t.string "discharge_reason", default: "", null: false
+    t.string "car_needs", default: "", null: false
+    t.string "diagnosis_history", default: "", null: false
+    t.string "behaviours", default: "", null: false
+    t.string "substance", default: "", null: false
+    t.string "assistance", default: "", null: false
+    t.string "casemanager", default: "", null: false
+    t.string "social_worker", default: "", null: false
+    t.string "forensic_history", default: "", null: false
+    t.string "notes", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "fee_freq"
+  end
 
   create_table "complaints", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -26,7 +53,7 @@ ActiveRecord::Schema.define(version: 2021_01_02_060716) do
 
   create_table "incident_reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "user_name", default: "", null: false
-    t.string "incident_type", default: "", null: false
+    t.string "incident_type", limit: 256
     t.string "other_type", default: "", null: false
     t.string "description", default: "", null: false
     t.string "action", default: "", null: false

@@ -1,0 +1,101 @@
+<%= form_with(model: @booking, remote: true , class: "forms-sample") do |f| %>
+  <div class="row">
+    <div class="col-2">
+      <div class="form-group">
+    <label for="exampleInputclient">Client Name</label>
+     <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name", :class => "form-control", placeholder:"Client Name" %>
+  </div>
+    </div>
+    <div class="col-2">
+      <div class="form-group">
+     <label for="exampleInputbook">BookForm</label>
+     <%= f.text_field :book_from, :class => "form-control", placeholder:"BookForm" %></div></div>
+    <div class="col-2">
+      <div class="form-group">
+     <label for="exampleInputbookto">Bookto</label>
+     <%= f.text_field :book_to, :class => "form-control", placeholder:"Bookto" %></div></div>
+    <div class="col-2">
+      <div class="form-group">
+     <label for="exampleInputroom">Room</label>
+    <%= f.text_field :room, :class => "form-control", placeholder:"Room" %></div></div>
+    <div class="col-2">
+      <div class="form-group">
+     <label for="exampleInputbed">Bed</label>
+    <%= f.text_field :bed, :class => "form-control", placeholder:"Bed" %></div></div>
+    
+  </div>
+  <div class="row">
+    <div class="col-2">
+  <div class="form-group">
+    <label for="exampleInputpaying">Paying via</label>
+    <%= f.text_field :payment, :class => "form-control", placeholder:"Paying via" %></div></div>
+    <div class="col-2">
+    <div class="form-group">
+    <label for="exampleInputfee1">Quoted fee</label>
+    <%= f.text_field :fee, :class => "form-control", placeholder:"Quoted fee" %></div></div>
+    <div class="col-2">
+      <div class="form-group">
+     <label for="exampleInputfee">fee freq</label>
+    <%= f.text_field :fee_freq, :class => "form-control", placeholder:"fee freq" %></div></div>
+    <div class="col-2">
+      <div class="form-group">
+     <label for="exampleInputdob">DOB</label>
+     <%= f.text_field :dob, :class => "form-control", placeholder:"DOB" %></div></div>
+    <div class="col-2">
+      <div class="form-group">
+     <label for="exampleInputage">or Age</label>
+    <%= f.text_field :age, :class => "form-control", placeholder:"or Age" %>
+  </div></div>
+</div>
+    
+    <div class="form-group">
+    <label for="exampleInputreffering">Reffering Contact Information</label>
+    <%= f.text_field :contact, :class => "form-control", placeholder:"Reffering Contact Information" %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFormer">Former Address</label>
+    <%= f.text_field :address, :class => "form-control", placeholder:"Former Address" %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputreason">Reason or referral-details of discharge</label>
+    <%= f.text_field :discharge_reason, :class => "form-control", placeholder:"Reason or referral-details of discharge" %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputneeds">Personal car needs</label>
+    <%= f.text_field :car_needs, :class => "form-control", placeholder:"Personal car needs" %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputdiagnosis">Diagnosis History</label>
+    <%= f.text_field :diagnosis_history, :class => "form-control", placeholder:"Diagnosis History" %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputbehaviour">Behaviours-wandering/agression</label>
+    <%= f.text_field :behaviours, :class => "form-control", placeholder:"Behaviours-wandering/agression" %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputhistory">History of or current substance abuse </label>
+   <%= f.text_field :substance, :class => "form-control", placeholder:"History of or current substance abuse" %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputmeds">Current meds/assistance requierd</label>
+     <%= f.text_field :assistance, :class => "form-control", placeholder:"Current meds/assistance requierd" %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputcase">Casemanager</label>
+   <%= f.text_field :casemanager, :class => "form-control", placeholder:"Casemanager" %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputsocial">Social Worker</label>
+     <%= f.text_field :social_worker, :class => "form-control", placeholder:"Social Worker" %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputforensic">Forensichistory</label>
+     <%= f.text_field :forensic_history, :class => "form-control", placeholder:"Forensichistory" %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputnote">Notes</label>
+     <%= f.text_field :notes, :class => "form-control", placeholder:"Notes" %>
+  </div>
+  <button type="submit" class="btn btn-primary mr-2"> Submit </button>
+  <button class="btn btn-light">Cancel</button>
+<% end %>   

@@ -6,7 +6,7 @@ class BookingsController < BaseController
 
 	def index
    	@page_title = "Bookings | Home"
-   	#get_collection
+   	get_collection
 	end
 	
 
@@ -26,10 +26,9 @@ class BookingsController < BaseController
   
   def create
 	 	@booking=Booking.new(permitted_params)
-    @booking.user_id=current_user.id      
     if @booking.valid?
       @booking.save
-      redirect_to Bookings_path
+      redirect_to bookings_path
 	 	else
       redirect_to home_index_path
 
@@ -40,7 +39,7 @@ class BookingsController < BaseController
     @booking=Booking.find(params[:id])
 	  @booking.update(permitted_params)
 	  if @booking.save
-      redirect_to Bookings_path
+      redirect_to bookings_path
 		else
       redirect_to home_index_path
 
@@ -63,7 +62,7 @@ class BookingsController < BaseController
 	private
 
 	def permitted_params
-    params.require(:booking).permit()
+    params.require(:booking).permit(:user_name,:book_from,:book_to,:room,:bed,:payment,:fee,:dob,:age,:contact,:address,:discharge_reason,:car_needs,:diagnosis_history,:behaviours,:substance,:assistance,:casemanager,:social_worker,:forensic_history,:notes,:fee_freq)
 	end
 
   def new_booking

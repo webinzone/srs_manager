@@ -1,0 +1,235 @@
+<div class="main-panel">
+        <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><b>Booking </b></h3>
+               <div class="col-md-4">
+            <%= link_to '+ Add New Booking', new_booking_path, :class =>"btn btn-success", :remote => true %>
+  
+              </div>
+             
+            </div>
+           <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+              	<div class="card">
+                  <div class="card-body">
+     				 <form class="forms-sample">
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">Client Name</label>
+                      </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.user_name %></label>
+
+                      </div>
+                     </div>
+						     <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">BookForm</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.book_from %></label>
+                         
+                      </div>
+                  </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputEating">Bookto</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.book_to %></label>
+                      </div>
+                      </div>	
+                      <div class="row">
+                      <div class="col-3">
+                       <div class="form-group">
+                        <label for="exampleInputMobility">Room</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.room %></label>
+  					</div>
+  					</div>
+  					<div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputHealth">Bed</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.bed %></label>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectMedication">Paying via</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.payment %></label>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectSocial">Quoted fee</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.fee %></label>
+                        </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectBehaviour">fee freq</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.fee_freq %></label>
+   					 </div>
+   					 </div>
+   					 <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">DOB</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.dob %></label>
+          				 </div>
+                          </div>
+                          <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Age</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.age %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Reffering Contact Information</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.contact %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Former Address</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.address %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Reason or referral-details of discharge</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.discharge_reason %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Personal car needs</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.car_needs %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Diagnosis History</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.diagnosis_history %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Behaviours-wandering/agression</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.behaviours %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">History of or current substance abuse </label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.substance %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Current meds/assistance requierd</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.assistance %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Casemanager</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.casemanager %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Social Worker</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.social_worker %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Forensichistory</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.forensic_history %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Notes</label>
+                        </div>
+                      </div>
+                        <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @booking.notes %></label>
+                   </div>
+                     </div>
+            
+                      
+                     </form>
+                  </div>
+              </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
