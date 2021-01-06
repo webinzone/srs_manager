@@ -1,32 +1,30 @@
-<!--<div class="main-panel">
-          <div class="content-wrapper">
+<div class="main-panel">
+        <div class="content-wrapper">
             <div class="page-header">
-              <h3 class="page-title"><b>Residents Records</b></h3>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#"></a></li>
-                  <li class="breadcrumb-item active" aria-current="page"></li>
-                </ol>
-              </nav>
+              <h3 class="page-title"><b>Resident Record </b></h3>
+               <div class="col-md-4">
+            <%= link_to '+ Add New Resident Record', new_resident_path, :class =>"btn btn-success", :remote => true %>
+  
+              </div>
+             
             </div>
-            <div class="row">
-           
-           <div class="col-12 grid-margin ">
-                <div class="card">
+           <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+              	<div class="card">
                   <div class="card-body">
-                    <%= image_tag("a1.jpg", :style => "border: 1px solid red; width: 100px; height: 100px; ") %>
+     				 <form class="forms-sample">
+              <% if @resident.image.attached? %>
+                <%= image_tag @resident.image.variant(resize: "100 x100")%>
+              <% end %>
+                   <div class="row">
 
-                  <form class="form-sample">
-
-                      <div class="row">
-
-                        <div class="col-md-6">
+                <div class="col-md-6">
 
                    <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Surname</label>
                         <div class="col-sm-9">
-                              <input type="text" class="form-control" />
-                            </div>
+                              <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.surname %></label>
+                                                       </div>
                       </div>
                     </div>
                     
@@ -36,8 +34,8 @@
                    <div class="form-group row">
                         <label class="col-sm-3 col-form-label">First Name</label>
                         <div class="col-sm-9">
-                              <input type="text" class="form-control" />
-                            </div>
+                             <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.fname %></label>
+                                                      </div>
                       </div>
                     </div>
                   </div>
@@ -48,8 +46,8 @@
                    <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Middle Name</label>
                         <div class="col-sm-9">
-                              <input type="text" class="form-control" />
-                            </div>
+                             <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.mname %></label>
+                                                      </div>
                       </div>
                     </div>
                        <div class="col-md-6">
@@ -57,8 +55,8 @@
                    <div class="form-group row">
                         <label class="col-sm-3 col-form-label">Preferred Name</label>
                         <div class="col-sm-9">
-                              <input type="text" class="form-control" />
-                            </div>
+                             <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.prefered_name %></label>
+                                                       </div>
                       </div>
                     </div>
                   </div>
@@ -68,10 +66,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Gender</label>
                             <div class="col-sm-9">
-                              <select class="form-control">
-                                <option>Male</option>
-                                <option>Female</option>
-                              </select>
+                              <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.gender %></label>
                             </div>
                           </div>
                         </div>
@@ -79,12 +74,7 @@
                           <div class="form-group row">
                              <label class="col-sm-3 col-form-label">Room No</label>
                             <div class="col-sm-9">
-                              <select class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                              </select>
+                              <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.room_no %></label>
                             </div>
                           </div>
                         </div>
@@ -95,20 +85,16 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Fee Accomodation and Service</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
-                            </div>
+                            <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.fee %></label>
+                                                      </div>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group row">
                              <label class="col-sm-3 col-form-label">Bed</label>
                             <div class="col-sm-9">
-                              <select class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                              </select>
+                              <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.bed %></label>
+
                             </div>
                           </div>
                         </div>
@@ -119,9 +105,8 @@
                           <div class="form-group row">
                              <label class="col-sm-3 col-form-label">Pay Frequency</label>
                             <div class="col-sm-9">
-                              <select class="form-control">
-                                <option>1Fortnighty</option> 
-                              </select>
+                              <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.pay_frequency %></label>
+                             
                             </div>
                           </div>
                         </div>
@@ -129,8 +114,8 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Date of Birth</label>
                             <div class="col-sm-9">
-                              <input class="form-control" placeholder="dd/mm/yyyy" />
-                            </div>
+                             <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.dob %></label>
+                                                      </div>
                           </div>
                         </div>
                       </div>
@@ -140,9 +125,7 @@
                           <div class="form-group row">
                           <label class="col-sm-3 col-form-label">How to pay</label>
                             <div class="col-sm-9">
-                              <select class="form-control">
-                                <option>EFT-STATE  TRUSTEES</option>
-                              </select>
+                              <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.payment_via %></label>
                             </div>
                           </div>
                         </div>  
@@ -150,8 +133,8 @@
                           <div class="form-group row">
                            <label class="col-sm-3 col-form-label">Date of Arrival</label>
                             <div class="col-sm-9">
-                              <input class="form-control" placeholder="dd/mm/yyyy" />
-                            </div>
+                             <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.arrival_date %></label>
+                                                      </div>
                           </div>
                         </div>
                       </div>
@@ -161,16 +144,16 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Administrator(Including Contact details,Ref no)</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
-                              </div>
+                             <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.admin %></label>
+                                                        </div>
                             </div>
                           </div>
                         <div class="col-md-6">
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Person No/Type</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
-                            </div>
+                             <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.person_type %></label>
+                                                       </div>
                           </div>
                         </div>
                       </div>
@@ -179,16 +162,16 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Guardian(Including contact details)</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
-                            </div>
+                             <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.guardian %></label>
+                                                      </div>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Nationality</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
-                            </div>
+                             <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.nationality %></label>
+                                                      </div>
                           </div>
                         </div>
                       </div>
@@ -198,7 +181,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Other Health Service Provoder(Including contact details)</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
+                              <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.health_service %></label>
                             </div>
                           </div>
                         </div>
@@ -206,10 +189,7 @@
                           <div class="form-group row">
                              <label class="col-sm-3 col-form-label">Marital Status</label>
                             <div class="col-sm-9">
-                              <select class="form-control">
-                                <option>Single</option>
-                                <option>Married</option>
-                              </select>
+                              <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.marital_status %></label>
                             </div>
                           </div>
                         </div>
@@ -220,16 +200,16 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Case Manager</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
-                            </div>
+                              <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.case_manager %></label>
+                                                       </div>
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Language Spoken</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
-                            </div>
+                             <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.language_spoken %></label>
+                                                        </div>
                           </div>
                         </div>
                       </div>
@@ -239,7 +219,7 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Medical Practioner(Including Contact Details)</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
+                             <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.medical_practioner %></label>
                             </div>
                           </div>
                         </div>
@@ -247,8 +227,8 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Next of kin(including contact details)</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
-                            </div>
+                              <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.next_kin %></label>
+                                                       </div>
                           </div>
                         </div>
                       </div>
@@ -258,85 +238,22 @@
                           <div class="form-group row">
                             <label class="col-sm-3 col-form-label">Date of Departure</label>
                             <div class="col-sm-9">
-                              <input type="text" class="form-control" />
+                              <br><label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident.departure_date %></label>
+
                             </div>
                           </div>
                         </div>
                       </div>
-                       <div class="row">
-
-                        <div class="col-md-6">
-                         <button type="submit" class="btn btn-primary mr-2"> Submit </button>
-                      <button class="btn btn-light">Cancel</button>
-                        </div>
-                      </div>
-                      </div>
-                      </div>
                       
-                    </form>       
-                   </div>
-                </div>
+                      </div>
+                      </div>
+            
+                      
+                     </form>
+                  </div>
               </div>
-            </div>
-          </div>
-        </div>-->
 
-        <div class="main-panel">
-  <div class="content-wrapper">
-    <div class="page-header">
-      <h3 class="page-title"><b>Resident Records</b></h3>
-        <div class="col-md-4">
-          <%= link_to '+ Add New Resident Record', new_resident_path, :class =>"btn btn-success", :remote => true %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 grid-margin stretch-card">
-          <div class="card">
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table">
-                  <thead style="background-color: #1294a3; color: white;">
-                    <tr>
-                      <th>ID</th>
-                      <th>User</th>
-                      <th>Created_at</th>
-                      <th style="align-content: center;">Action</th>
-                      <th></th>
-                        <th></th>
-                    </tr>
-                  </thead>
-      
-                  <tbody >
-                    <% @residents.each_with_index do |resident, i| %>
-                      <tr id='residents_ROW_<%= resident.id %>'>
-                        <td>
-                          <span><%= i+1 %></span>
-                        </td>
-                        <td>
-                          <span><%= resident.surname %></span>
-                        </td>
-                        
-                        <td>
-                          <span><%= resident.created_at.in_time_zone("Asia/Muscat").strftime('%d %B %Y, %H:%M') if resident.created_at %></span>
-                        </td>
-                        <td>
-                          <%= button_to resident_path(resident),:method => :get, :class => "btn-success" do %><i class="fa fa-eye"></i><% end %>
-                        </td>
-                        <td><%= button_to edit_resident_path(resident), :method => :get, :remote => true, :class => "btn-success" do %><i class="fa fa-edit"></i><% end %>
-                        </td>
-                        <td><%= button_to resident_path(resident), :method => :delete, :remote => true, data: {confirm: "Are you sure you want to delete this?"}, :class => "btn-danger" do %><i class="fa fa-trash"></i><% end %>     </td>
-                      </tr>
-                    <% end %>
-                  </tbody>
-                </table>
               </div>
-            </div>
           </div>
-        </div>
       </div>
   </div>
-</div>
-
-
-
-        
