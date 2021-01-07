@@ -1,0 +1,2 @@
+class ResidentsAgreement < ApplicationRecord
+end

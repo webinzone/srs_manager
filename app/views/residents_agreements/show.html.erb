@@ -1,0 +1,236 @@
+<div class="main-panel">
+        <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><b>Resident Service Agreements </b></h3>
+               <div class="col-md-4">
+           <%= link_to '+ Add New RSA', new_residents_agreement_path, :class =>"btn btn-success", :remote => true %>
+  
+              </div>
+             
+            </div>
+        <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                      <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                                  <label for="exampleInputName1">Resident Name</label>
+                                </div>
+                              </div>
+                              <div class="col-9">
+                                <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.user_name %></label>
+                              </div>
+                          </div>
+                      <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputroom">Room No</label>
+                      </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.room_no %></label>
+                    </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputbed">Bed</label>
+                      </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.bed %></label>
+                    </div>
+                  </div>
+                  <div class="row">
+                          <div class="col-3">
+                    <div class="form-group">
+                        <label for="exampleInputdate">Date of Birth</label>
+                      </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.dob %></label>
+                    </div>      
+                    </div>
+                   <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputguardian">Guardian</label>
+                      </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.guardian %></label>
+                    </div>
+                  </div>
+                          <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputadmin">Administrator</label>
+                        </div>
+                    </div>
+                        <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.admin %></label>
+                    </div>
+                  </div>
+                      <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputperson">Person Nominated</label>
+                        </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.person_nominated %></label>
+                    </div>        
+                    </div>      
+                  <p class="card-description">DURATION OF STAY</p>
+                    <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputstayform">Indefinite period of stay form</label>
+                        </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.stay_period %></label>
+                    </div>  
+                       </div>
+                   <div class="row">
+                      <div class="col-3">
+                          <div class="form-group">
+                    <label for="exampleInputfixed">Fixed period stay form</label>
+                    </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.fixed_period %></label>
+                    </div>
+                    </div>
+                   <div class="row">
+                      <div class="col-3">
+                        <div class="form-group">
+                          <label for="exampleInputending">Ending on</label>
+                        </div>
+                        </div>
+                        <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.ending_on %></label>
+                    </div>    
+                    </div>
+                    <p class="card-description">FEE AND CHARGES</p>
+                   <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                      <label for="exampleInputsupport">Fee for accommodation and personal support</label>
+                      </div>
+                    </div>
+                        <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.accommodation_fee %></label>
+                    </div>      
+                   </div>
+                   <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputpay">How to pay</label>
+                        </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.payment_via %></label>
+                    </div>
+                  </div>
+                        <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputpayment">Frequency of payment</label>
+                        </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.payment_frequency %></label>
+                    </div>
+                  </div>
+                    <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputitems">Fee in advance charged for other items/service provide by SRS</label>
+                        </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.advanced_fee %></label>
+                    </div>
+                      </div>
+                    <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputdeposite">Security deposite charged</label>
+                        </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.security_deposit %></label>
+                    </div>
+                  </div>
+                    <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputreservation">Reservation for charged</label>
+                        </div>
+                    </div>
+                        <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.reservation_charge %></label>
+                    </div>  
+                  </div>
+                    <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputestablishment">Establishment for charged</label>
+                        </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.establishment %></label>
+                    </div> </div>
+                    <p class="card-description">INDIVIDUAL SPECIFIES</p>
+                   <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputcondition">Condition report provided to the resident?</label>
+                      </div>
+                    </div>
+                   <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.condition_report_status %></label>
+                    </div> 
+                  </div>
+                   <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputresident">Specify items and services provided to the resident </label>
+                        </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.services %></label>
+                    </div>                      
+                  </div>
+                  <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputapply">Any special items that may apply to the resident </label>
+                        </div>
+                    </div>
+                        <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.special_items %></label>
+                    </div>
+                      </div>
+                   <div class="row">
+                          <div class="col-3">
+                              <div class="form-group">
+                        <label for="exampleInputproperties">Personal properties belonging resident brought into SRS</label>
+                        </div>
+                    </div>
+                       <div class="col-9">
+                      <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @resident_agreement.personal_properties %></label>
+                    </div>
+                      </div>
+                      
+                      
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>

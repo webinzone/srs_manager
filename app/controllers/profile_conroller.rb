@@ -46,8 +46,7 @@ class ProfileController < BaseController
       params.require(:user).permit(
         :id,
         :name,
-        :email,
-        :encrypted_password
+        :email
         )
     end
 end

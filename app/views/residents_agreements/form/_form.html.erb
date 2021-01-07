@@ -1,0 +1,96 @@
+<%= form_with(model: @resident_agreement, remote: true , class: "forms-sample") do |f| %>
+                      <div class="form-group">
+                        <label for="exampleInputName1">Resident Name</label>
+                        <%= f.text_field :user_name, :class => "form-control", placeholder:"Resident Name" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputroom">Room No</label>
+                       <%= f.text_field :room_no, :class => "form-control", placeholder:"Room No" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputbed">Bed</label>
+                       <%= f.text_field :bed, :class => "form-control", placeholder:"Bed" %>
+                       </div>
+                      <div class="form-group">
+                        <label for="exampleInputdate">Date of Birth</label>
+                       <%= f.text_field :dob, :class => "form-control", placeholder:"Date of Birth" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputguardian">Guardian</label>
+                       <%= f.text_field :guardian, :class => "form-control", placeholder:"Guardian" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputadmin">Administrator</label>
+                        <%= f.text_field :admin, :class => "form-control", placeholder:"nature" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputperson">Person Nominated</label>
+                       <%= f.text_field :person_nominated, :class => "form-control", placeholder:"Administrator" %>
+                      </div>
+                      <p class="card-description">DURATION OF STAY</p>
+                      <div class="form-group">
+                        <div class="form-group">
+                        <label for="exampleInputstayform">Indefinite period of stay form</label>
+                       <%= f.text_field :stay_period, :class => "form-control", placeholder:"Indefinite period of stay form" %>
+                       </div>
+                      <div class="form-group">
+                        <label for="exampleInputfixed">Fixed period stay form</label>
+                       <%= f.text_field :fixed_period, :class => "form-control", placeholder:"Fixed period stay form" %>
+                       </div>
+                      <div class="form-group">
+                        <label for="exampleInputending">Ending on</label>
+                        <%= f.text_field :ending_on, :class => "form-control", placeholder:"Ending on" %>
+                      </div>
+                    <p class="card-description">FEE AND CHARGES</p>
+                      <div class="form-group">
+                      <label for="exampleInputsupport">Fee for accommodation and personal support</label>
+                        <%= f.text_field :accommodation_fee, :class => "form-control", placeholder:"Fee for accommodation and personal support" %>
+                        </div>
+                      <div class="form-group">
+                        <label for="exampleInputpay">How to pay</label>
+                       <%= f.text_field :payment_via, :class => "form-control", placeholder:"How to pay" %>   
+                        </div>
+                        <div class="form-group">
+                        <label for="exampleInputpayment">Frequency of payment</label>
+                       <%= f.text_field :payment_frequency, :class => "form-control", placeholder:"Frequency of payment" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleInputitems">Fee in advance charged for other items/service provide by SRS</label>
+                       <%= f.text_field :advanced_fee, :class => "form-control", placeholder:"Fee in advance charged for other items/service provide by SRS" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleInputdeposite">Security deposite charged</label>
+                       <%= f.text_field :security_deposit, :class => "form-control", placeholder:"Security deposite charged" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleInputreservation">Reservation for charged</label>
+                        <%= f.text_field :reservation_charge, :class => "form-control", placeholder:"Reservation for charged" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleInputestablishment">Establishment for charged</label>
+                       <%= f.text_field :establishment, :class => "form-control", placeholder:"Establishment for charged" %>
+                      </div>
+                    <p class="card-description">INDIVIDUAL SPECIFIES</p>
+                    <form class="forms-sample">
+                      <div class="form-group">
+                        <label for="exampleInputcondition">Condition report provided to the resident?</label>
+                      <%= check_box_tag(:condition_report_status) %>
+                      <%= label_tag(:condition_report_status, "YES", {checked: true}) %>
+                      <%= check_box_tag(:condition_report_status) %>
+                      <%= label_tag(:condition_report_status, "NO", {checked: true}) %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputresident">Specify items and services provided to the resident </label>
+                       <%= f.text_field :services, :class => "form-control", placeholder:"Specify items and services provided to the resident" %>
+                      </div>
+                     <div class="form-group">
+                        <label for="exampleInputapply">Any special items that may apply to the resident </label>
+                        <%= f.text_field :special_items, :class => "form-control", placeholder:"Any special items that may apply to the resident" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputproperties">Personal properties belonging resident brought into SRS</label>
+                       <%= f.text_field :personal_properties, :class => "form-control", placeholder:"Personal properties belonging resident brought into SRS" %>
+                      </div>
+                      <button type="submit" class="btn btn-primary mr-2"> Submit </button>
+                      <button class="btn btn-light">Cancel</button>
+                   <% end %>

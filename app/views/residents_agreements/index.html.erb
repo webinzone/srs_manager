@@ -1,110 +1,60 @@
 <div class="main-panel">
-          <div class="content-wrapper">
-            <div class="page-header">
-              <h3 class="page-title"><b>Residential Service Agreement</b></h3>
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="#"></a></li>
-                  <li class="breadcrumb-item active" aria-current="page"></li>
-                </ol>
-              </nav>
-            </div>
-            <div class="row">
-            
-<div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <p class="card-description">RESIDENT DETAILS</p>
-                    <form class="forms-sample">
-                      <div class="form-group">
-                        <label for="exampleInputName1">Resident Name</label>
-                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Resident Name" />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputroom">Room No</label>
-                        <input type="text" class="form-control" id="exampleInputroom" placeholder="Room No" />
-                        <label for="exampleInputbed">Bed</label>
-                        <input type="text" class="form-control" id="exampleInputbed" placeholder="Bed" />
-                        <label for="exampleInputdate">Date of Birth</label>
-                        <input type="text" class="form-control" id="exampleInputroom" placeholder="dd/mm/yyyy" />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputguardian">Guardian</label>
-                        <input type="text" class="form-control" id="exampleInputguardian" placeholder="Guardian" />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputadmin">Administrator</label>
-                        <input type="text" class="form-control" id="exampleInputadmin" placeholder="Administrator" />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputperson">Person Nominated</label>
-                        <input type="text" class="form-control" id="exampleInputperson" placeholder="Person Nominated" />
-                      </div>
-                      <p class="card-description">DURATION OF STAY</p>
-                      <div class="form-group">
-                        <div class="form-group">
-                        <label for="exampleInputstayform">Indefinite period of stay form</label>
-                        <input type="text" class="form-control" id="examplestayform" placeholder="Indefinite period of stay form" />
-                        <label for="exampleInputfixed">Fixed period stay form</label>
-                        <input type="text" class="form-control" id="exampleInputfixed" placeholder="Fixed period stay form" />
-                        <label for="exampleInputending">Ending on</label>
-                        <input type="text" class="form-control" id="exampleInputending" placeholder="Ending on" />
-                      </div>
-                    <p class="card-description">FEE AND CHARGES</p>
-                      <div class="form-group">
-                      <label for="exampleInputsupport">Fee for accommodation and personal support</label>
-                        <input type="text" class="form-control" id="exampleInputsupport" placeholder="Fee for accommodation and personal support" />
-                        <label for="exampleInputpay">How to pay</label>
-                        <input type="text" class="form-control" id="exampleInputpay" placeholder="How to pay" />   
-                        </div>
-                        <div class="form-group">
-                        <label for="exampleInputpayment">Frequency of payment</label>
-                        <input type="text" class="form-control" id="exampleInputpayment" placeholder="Frequency of payment" />
-                      </div>
-                       <div class="form-group">
-                        <label for="exampleInputitems">Fee in advance charged for other items/service provide by SRS</label>
-                        <input type="text" class="form-control" id="exampleInputitems" placeholder="ee in advance charged for other items/service provide by SRS" />
-                      </div>
-                       <div class="form-group">
-                        <label for="exampleInputdeposite">Security deposite charged</label>
-                        <input type="text" class="form-control" id="exampleInputdeposite" placeholder="Security deposite charged" />
-                      </div>
-                       <div class="form-group">
-                        <label for="exampleInputreservation">Reservation for charged</label>
-                        <input type="text" class="form-control" id="exampleInputreservation" placeholder="Reservation for charged" />
-                      </div>
-                       <div class="form-group">
-                        <label for="exampleInputestablishment">Establishment for charged</label>
-                        <input type="text" class="form-control" id="exampleInputestablishment" placeholder="Establishment for charged" />
-                      </div>
-                    <p class="card-description">INDIVIDUAL SPECIFIES</p>
-                    <form class="forms-sample">
-                      <div class="form-group">
-                        <label for="exampleInputcondition">Condition report provided to the resident?</label>
-                        <label class="form-check-label">
-                        <input type="checkbox" class="form-control" id="exampleInputcondition" value="option1" /> Yes</label> <label class="form-check-label">
-                        <input type="checkbox" class="form-control" id="exampleInputcondition" value="option2" /> No</label>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputresident">Specify items and services provided to the resident </label>
-                        <input type="text" class="form-control" id="exampleInputresident" placeholder="Specify items and services provided to the residen" />
-                      </div>
-                     <div class="form-group">
-                        <label for="exampleInputapply">Any special items that may apply to the resident </label>
-                        <input type="text" class="form-control" id="exampleInputapply" placeholder="Any special items that may apply to the resident" />
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputproperties">Personal properties belonging resident brought into SRS</label>
-                        <input type="text" class="form-control" id="exampleInputproperties" placeholder="Personal properties belonging resident brought into SRS" />
-                      </div>
-                      <button type="submit" class="btn btn-primary mr-2"> Submit </button>
-                      <button class="btn btn-light">Cancel</button>
-                    </form>
-                  </div>
-                </div>
+  <div class="content-wrapper">
+    <div class="page-header">
+      <h3 class="page-title"><b>Resident Service Agreements</b></h3>
+        <div class="col-md-4">
+          <%= link_to '+ Add New RSA', new_residents_agreement_path, :class =>"btn btn-success", :remote => true %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead style="background-color: #1294a3; color: white;">
+                    <tr>
+                      <th>ID</th>
+                      <th>User</th>
+                      <th>Created_at</th>
+                      <th style="align-content: center;">Action</th>
+                      <th></th>
+                        <th></th>
+                    </tr>
+                  </thead>
+      
+                  <tbody >
+                    <% @resident_agreements.each_with_index do |resident_agreement, i| %>
+                      <tr id='residents_ROW_<%= resident_agreement.id %>'>
+                        <td>
+                          <span><%= i+1 %></span>
+                        </td>
+                        <td>
+                          <span><%= resident_agreement.user_name %></span>
+                        </td>
+                        
+                        <td>
+                          <span><%= resident_agreement.created_at.in_time_zone("Asia/Muscat").strftime('%d %B %Y, %H:%M') if resident_agreement.created_at %></span>
+                        </td>
+                        <td>
+                          <%= button_to residents_agreement_path(resident_agreement),:method => :get, :class => "btn-success" do %><i class="fa fa-eye"></i><% end %>
+                        </td>
+                        <td><%= button_to edit_residents_agreement_path(resident_agreement), :method => :get, :remote => true, :class => "btn-success" do %><i class="fa fa-edit"></i><% end %>
+                        </td>
+                        <td><%= button_to residents_agreement_path(resident_agreement), :method => :delete, :remote => true, data: {confirm: "Are you sure you want to delete this?"}, :class => "btn-danger" do %><i class="fa fa-trash"></i><% end %>     </td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
               </div>
-
             </div>
           </div>
         </div>
+      </div>
+  </div>
+</div>
+
+
+
+        
       

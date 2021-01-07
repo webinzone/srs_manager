@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_06_104952) do
+ActiveRecord::Schema.define(version: 2021_01_07_100159) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -114,6 +114,32 @@ ActiveRecord::Schema.define(version: 2021_01_06_104952) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "image"
+  end
+
+  create_table "residents_agreements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "user_name", default: "", null: false
+    t.string "room_no", default: "", null: false
+    t.string "bed", default: "", null: false
+    t.string "dob", default: "", null: false
+    t.string "guardian", default: "", null: false
+    t.string "admin", default: "", null: false
+    t.string "person_nominated", default: "", null: false
+    t.string "stay_period", default: "", null: false
+    t.string "fixed_period", default: "", null: false
+    t.string "ending_on", default: "", null: false
+    t.string "accommodation_fee", default: "", null: false
+    t.string "payment_via", default: "", null: false
+    t.string "payment_frequency", default: "", null: false
+    t.string "advanced_fee", default: "", null: false
+    t.string "security_deposit", default: "", null: false
+    t.string "reservation_charge", default: "", null: false
+    t.string "establishment", default: "", null: false
+    t.string "condition_report_status", default: "", null: false
+    t.string "services", default: "", null: false
+    t.string "personal_properties", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "special_items"
   end
 
   create_table "support_plans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
