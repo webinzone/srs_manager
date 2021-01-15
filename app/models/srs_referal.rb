@@ -1,0 +1,4 @@
+class SrsReferal < ApplicationRecord
+ 
+    
+end

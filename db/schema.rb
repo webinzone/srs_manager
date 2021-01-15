@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_07_100159) do
+ActiveRecord::Schema.define(version: 2021_01_15_114216) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -142,6 +142,34 @@ ActiveRecord::Schema.define(version: 2021_01_07_100159) do
     t.string "special_items"
   end
 
+  create_table "srs_referals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "user_name", default: "", null: false
+    t.string "address", default: "", null: false
+    t.string "telephone", default: "", null: false
+    t.string "fax", default: "", null: false
+    t.string "email", default: "", null: false
+    t.string "phone2", default: "", null: false
+    t.string "email2", default: "", null: false
+    t.string "address2", default: "", null: false
+    t.string "r_name", default: "", null: false
+    t.string "p_name", default: "", null: false
+    t.string "dob", default: "", null: false
+    t.string "nok", default: "", null: false
+    t.string "case_manager", default: "", null: false
+    t.string "gaurdian", default: "", null: false
+    t.string "practitioner", default: "", null: false
+    t.string "nomini", default: "", null: false
+    t.string "admin", default: "", null: false
+    t.string "medicare_no", default: "", null: false
+    t.string "pension", default: "", null: false
+    t.string "languages", default: "", null: false
+    t.string "religous", default: "", null: false
+    t.string "nationality", default: "", null: false
+    t.string "diagnosis", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "support_plans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "user_name", default: "", null: false
     t.string "Hygiene", default: "", null: false
@@ -154,6 +182,43 @@ ActiveRecord::Schema.define(version: 2021_01_07_100159) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "mobility"
+  end
+
+  create_table "transfer_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "user_name", default: "", null: false
+    t.string "dob", default: "", null: false
+    t.string "gender", default: "", null: false
+    t.string "nationality", default: "", null: false
+    t.string "languages", default: "", null: false
+    t.string "religion", default: "", null: false
+    t.string "medicare_no", default: "", null: false
+    t.string "pension_no", default: "", null: false
+    t.string "chemist", default: "", null: false
+    t.string "date", default: "", null: false
+    t.string "from", default: "", null: false
+    t.string "address", default: "", null: false
+    t.string "ph", default: "", null: false
+    t.string "fax", default: "", null: false
+    t.string "to", default: "", null: false
+    t.string "reason", default: "", null: false
+    t.string "medication_chart", default: "", null: false
+    t.string "medication_list", default: "", null: false
+    t.string "websterpak", default: "", null: false
+    t.string "medication_sent", default: "", null: false
+    t.string "last_time_medication", default: "", null: false
+    t.string "accompanying_reports", default: "", null: false
+    t.string "next", default: "", null: false
+    t.string "advised", default: "", null: false
+    t.string "guardian", default: "", null: false
+    t.string "guardian_advised", default: "", null: false
+    t.string "case_manager", default: "", null: false
+    t.string "case_manager_advised", default: "", null: false
+    t.string "nomini", default: "", null: false
+    t.string "nomini_advised", default: "", null: false
+    t.string "admin", default: "", null: false
+    t.string "admin_advised", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

@@ -1,0 +1,256 @@
+<div class="main-panel">
+        <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><b>Support Plans</b></h3>
+               <div class="col-md-4">
+            <%= link_to '+ Add New Support Plan', new_srs_referal_path, :class =>"btn btn-success", :remote => true %>
+  
+              </div>
+             
+            </div>
+           <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+              	<div class="card">
+                  <div class="card-body">
+     				      <form class="forms-sample">
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">SRS Name</label>
+                      </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.user_name %></label>
+
+                      </div>
+                     </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">SRS Address</label>
+                      </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.address %></label>
+
+                      </div>
+                     </div>
+						<div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">Telephone</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.telephone %></label>
+                         
+                      </div>
+                  </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputEating">Fax </label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.fax %></label>
+                      </div>
+                      </div>	
+                      <div class="row">
+                      <div class="col-3">
+                       <div class="form-group">
+                        <label for="exampleInputMobility">Email</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.email %></label>
+  					</div>
+  					</div>
+                                  <p class="card-description">ADDITIONAL INFORMATION CONTACT</p>
+
+  					<div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputHealth">Contact Name</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.phone2 %></label>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectMedication">Email</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.email2 %></label>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectSocial">Address</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.address2 %></label>
+                        </div>
+                      </div>
+<p class="card-description">REASON FOR REFFERAL - DETAIL OF DISCHARGE</p>
+                      <div>
+                        <pre class="tab"></pre>
+                      </div>
+                      <p class="card-description">RESIDENT DETAILS</p>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectBehaviour">Resident Name</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.r_name %></label>
+   					 </div>
+   					 </div>
+   					 <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Prefferd Name</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.p_name %></label>
+          				 </div>
+                          </div>
+                           <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">D.O.B</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.dob %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">NOK</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.nok %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Case Manager</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.case_manager %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Guardian</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.gaurdian %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">General Practitioner</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.practitioner %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Person nominated</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.nomini %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Administrator</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.admin %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Medicare Number</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.medicare_no %></label>
+                   </div>
+                          </div>
+                      
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Pension</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.pension %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Language Spoken</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.languages %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Religous prefrence</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.religous %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Nationality</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.nationality %></label>
+                   </div>
+                          </div>
+
+                          <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Diagnosis</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @srs_referal.diagnosis %></label>
+                   </div>
+                          </div>
+
+                     </form>
+                  </div>
+              </div>
+
+              </div>
+          </div>
+      </div>
+  </div>

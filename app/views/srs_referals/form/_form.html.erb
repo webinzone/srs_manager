@@ -1,0 +1,103 @@
+<%= form_with(model: @srs_referal, remote: true , class: "forms-sample") do |f| %>
+                      <div class="form-group">
+                        <label for="exampleInputname">SRS Name</label>
+                       <%= f.text_field :user_name, :class => "form-control", placeholder:"SRS Name" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleaddress">SRS Address</label>
+                        <%= f.text_field :address, :class => "form-control", placeholder:"SRS Address" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputtelephone">Telephone</label>
+                        <%= f.text_field :telephone, :class => "form-control", placeholder:"Telephone" %>
+                      </div>
+                      <div class="form-group">                     
+                        <label for="exampleInputfax">Fax</label>
+                       <%= f.text_field :fax, :class => "form-control", placeholder:"Fax" %>
+                         </div>
+                      <div class="form-group"> 
+                        <label for="exampleInputemail">Email</label>
+                       <%= f.text_field :email, :class => "form-control", placeholder:"Email" %>
+                      </div>
+                      <p class="card-description">ADDITIONAL INFORMATION CONTACT</p>
+                      <div  class="form-group">
+                         <label for="exampleInputcontact">Contact Name</label>
+                       <%= f.text_field :phone2, :class => "form-control", placeholder:"Contact Name" %>
+                         </div>
+                      <div class="form-group"> 
+                        <label for="exampleInputemail">Email</label>
+                        <%= f.text_field :email2, :class => "form-control", placeholder:"Email" %>
+                      </div>
+                      <div  class="form-group">
+                        <label for="exampleInputadd1">Address</label>
+                       <%= f.text_field :address2, :class => "form-control", placeholder:"Address" %>
+                      </div>
+                       <p class="card-description">REASON FOR REFFERAL - DETAIL OF DISCHARGE</p>
+                      <div>
+                        <pre class="tab"></pre>
+                      </div>
+                      <p class="card-description">RESIDENT DETAILS</p>
+                       <div  class="form-group">
+                         <label for="exampleInputresname">Resident Name</label>
+                        <%= f.text_field :r_name, :class => "form-control", placeholder:"Resident Name" %>
+                      </div>
+                       <div  class="form-group">
+                         <label for="exampleInputprefname">Prefferd Name</label>
+                       <%= f.text_field :p_name, :class => "form-control", placeholder:"Prefferd Name" %>
+                         </div>
+                      <div class="form-group"> 
+                        <label for="exampleInputdob">D.O.B</label>
+                        <%= f.text_field :dob, :class => "form-control", placeholder:"D.O.B" %>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleInputnok">NOK</label>
+                       <%= f.text_field :nok, :class => "form-control", placeholder:"NOK" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputmanager">Case Manager</label>
+                        <%= f.text_field :case_manager, :class => "form-control", placeholder:"Case Manager" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputguardian">Guardian</label>
+                       <%= f.text_field :gaurdian, :class => "form-control", placeholder:"Guardian" %>
+                      </div>
+                        <div class="form-group">
+                        <label for="exampleInputgeneral">General Practitioner</label>
+                        <%= f.text_field :practitioner, :class => "form-control", placeholder:"General Practitioner" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleInputperson">Person nominated </label>
+                       <%= f.text_field :nomini, :class => "form-control", placeholder:"Person nominated" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleInputadministartor">Administrator</label>
+                       <%= f.text_field :admin, :class => "form-control", placeholder:"Administrator" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleInputmedicare">Medicare Number</label>
+                        <%= f.text_field :medicare_no, :class => "form-control", placeholder:"Medicare Number" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputpension">Pension</label>
+                        <%= f.text_field :pension, :class => "form-control", placeholder:"Pension" %>
+                         </div>
+                      <div class="form-group"> 
+                         <label for="exampleInputlangu">Language Spoken</label>
+                       <%= f.text_field :languages, :class => "form-control", placeholder:"Language Spoken" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputreligous">Religous prefrence</label>
+                        <%= f.text_field :religous, :class => "form-control", placeholder:"Religous prefrence" %>
+                         </div>
+                      <div class="form-group"> 
+                         <label for="exampleInputnationality">Nationality</label>
+                       <%= f.text_field :nationality, :class => "form-control", placeholder:"Nationality" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputdiagnosis">Diagnosis</label>
+                        <%= f.text_field :diagnosis, :class => "form-control", placeholder:"Diagnosis" %>
+                      </div>
+                      <button type="submit" class="btn btn-primary mr-2"> Submit </button>
+                      <button class="btn btn-light">Cancel</button>
+                   <% end %>

@@ -1,0 +1,339 @@
+<div class="main-panel">
+        <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><b>Transfer Details</b></h3>
+               <div class="col-md-4">
+            <%= link_to '+ Add New Transfer Details', new_transfer_detail_path, :class =>"btn btn-success", :remote => true %>
+  
+              </div>
+             
+            </div>
+           <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+              	<div class="card">
+                  <div class="card-body">
+     				      <form class="forms-sample">
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">Resident Name</label>
+                      </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.user_name %></label>
+
+                      </div>
+                     </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">Date of birth</label>
+                      </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.dob %></label>
+
+                      </div>
+                     </div>
+						<div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputPersonal">Gender</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.gender %></label>
+                         
+                      </div>
+                  </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputEating">Nationality </label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.nationality %></label>
+                      </div>
+                      </div>	
+                      <div class="row">
+                      <div class="col-3">
+                       <div class="form-group">
+                        <label for="exampleInputMobility">Language Spoken</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.languages %></label>
+  					</div>
+  					</div>
+                                 
+  					<div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleInputHealth">Religion</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.religion %></label>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectMedication">Medicare No</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.medicare_no %></label>
+                      </div>
+                      </div>
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectSocial">Pension No</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.pension_no %></label>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectBehaviour">Chemist Detail</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.chemist %></label>
+   					 </div>
+   					 </div>
+   					 <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Date</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.date %></label>
+          				 </div>
+                          </div>
+                           <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">From</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.from %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Address</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.address %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Ph</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.ph %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Fax</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.fax %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">To</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.to %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Reason For Transfer</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.reason %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Current Medication Chart Attached?</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.medication_chart %></label>
+                   </div>
+                          </div> 
+                          <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">If no, list any medication the resident on?</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.medication_list %></label>
+                   </div>
+                          </div> 
+                      
+                      <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Websterpak</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.websterpak %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">If no, list any medication sent with resident if any:</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.medication_sent %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Last time Medication given</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.last_time_medication %></label>
+                   </div>
+                          </div><div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Accompanying Reports</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.accompanying_reports %></label>
+                   </div>
+                          </div>
+
+                          <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Next</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.next %></label>
+                   </div>
+                          </div>
+                           <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Has been advised of the transfer</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.advised %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Guardian</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.guardian %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Has been advised of the transfer</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.guardian_advised %></label>
+                   </div>
+                          </div> <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Case Manager</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.case_manager %></label>
+                   </div>
+                          </div>
+                          <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Has been advised of the transfer</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.case_manager_advised %></label>
+                   </div>
+                          </div>
+                          <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Person Nominated</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.nomini %></label>
+                   </div>
+                          </div>
+                          <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Has been advised of the transfer</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.nomini_advised %></label>
+                   </div>
+                          </div>
+                          <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Administrator</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.admin %></label>
+                   </div>
+                          </div>
+                          <div class="row">
+                      <div class="col-3">
+                      <div class="form-group">
+                        <label for="exampleSelectGoal">Has been advised of the transfer</label>
+                        </div>
+                     </div>
+                      <div class="col-9">
+                        <label for="exampleInputPersonal">:&nbsp;&nbsp;<%= @transfer_detail.admin_advised %></label>
+                   </div>
+                          </div>
+
+                     </form>
+                  </div>
+              </div>
+
+              </div>
+          </div>
+      </div>
+  </div>

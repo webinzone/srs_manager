@@ -74,10 +74,10 @@
                     <form class="forms-sample">
                       <div class="form-group">
                         <label for="exampleInputcondition">Condition report provided to the resident?</label>
-                      <%= check_box_tag(:condition_report_status) %>
-                      <%= label_tag(:condition_report_status, "YES", {checked: true}) %>
-                      <%= check_box_tag(:condition_report_status) %>
-                      <%= label_tag(:condition_report_status, "NO", {checked: true}) %>
+                       <%= f.check_box :condition_report_status, { checked: false }, 'No', 'YES'  %>
+                      <%= f.label :condition_report_status, "YES" %>
+                       <%= f.check_box :condition_report_status, { checked: false }, 'NO', 'YES'  %>
+                        <%= f.label :condition_report_status, "NO" %>
                       </div>
                       <div class="form-group">
                         <label for="exampleInputresident">Specify items and services provided to the resident </label>

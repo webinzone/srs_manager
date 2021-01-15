@@ -1,0 +1,159 @@
+<%= form_with(model: @transfer_detail, remote: true , class: "forms-sample") do |f| %>
+                      <div class="form-group">
+                        <label for="exampleInputname">Resident Name</label>
+                        <%= f.text_field :user_name, :class => "form-control", placeholder:"Resident Name" %>
+                      </div>
+                      <div class="form-group">
+
+                        <label for="exampleInputdob">Date of birth</label>
+                       <%= f.text_field :dob, :class => "form-control", placeholder:"Date of birth" %>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="exampleInputcondition">Gender</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <%= f.check_box :gender, { checked: false }, 'FEMALE', 'MALE'  %>
+                      <%= f.label :gender, "MALE" %>&nbsp;&nbsp;&nbsp;&nbsp;
+                       <%= f.check_box :gender, { checked: false }, 'FEMALE', 'MALE'  %>
+                        <%= f.label :gender, "FEMALE" %>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="exampleInputnationality">Nationality</label>
+                        <%= f.text_field :nationality, :class => "form-control", placeholder:"Nationality" %>
+                        </div>
+                      <div class="form-group">
+                        <label for="exampleInputlanguage">Language Spoken</label>
+                        <%= f.text_field :languages, :class => "form-control", placeholder:"Language Spoken" %>
+                        </div>
+                      <div class="form-group">
+                        <label for="exampleInputreligion">Religion</label>
+                       <%= f.text_field :religion, :class => "form-control", placeholder:"Religion" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleSelectmedicare">Medicare No</label>
+                        <%= f.text_field :medicare_no, :class => "form-control", placeholder:"Medicare No" %>
+                         </div>
+                      <div class="form-group">
+                         <label for="exampleSelectpension">Pension No</label>
+                         <%= f.text_field :pension_no, :class => "form-control", placeholder:"Pension No" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputchemist">Chemist Detail</label>
+                       <%= f.text_field :chemist, :class => "form-control", placeholder:"Chemist Detail" %> 
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputdate">Date</label>
+                       <%= f.text_field :date, :class => "form-control", placeholder:"Date" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputfrom">From</label>
+                        <%= f.text_field :from, :class => "form-control", placeholder:"From" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputaddress">Address</label>
+                       <%= f.text_field :address, :class => "form-control", placeholder:"Address" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputph">Ph</label>
+                        <%= f.text_field :ph, :class => "form-control", placeholder:"Ph" %>
+                        </div>
+                      <div class="form-group">
+                        <label for="exampleInpufax">Fax</label>
+                        <%= f.text_field :fax, :class => "form-control", placeholder:"Fax" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleInputto">To</label>
+                       <%= f.text_field :to, :class => "form-control", placeholder:"To" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputreason">Reason For Transfer</label>
+                       <%= f.text_field :reason, :class => "form-control", placeholder:"Reason For Transfer" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputchart">Current Medication Chart Attached?</label>
+                        <%= f.check_box :medication_chart, { checked: false }, 'No', 'YES'  %>
+                       <%= f.label :medication_chart, "YES" %>
+                       <%= f.check_box :medication_chart, { checked: false }, 'NO', 'YES'  %>
+                        <%= f.label :medication_chart, "NO" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputifno">If no, list any medication the resident on</label>
+                        <%= f.text_field :medication_list, :class => "form-control", placeholder:"If no, list any medication the resident on" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputweb">Websterpak</label>
+                      <%= f.check_box :websterpak, { checked: false }, 'No', 'YES'  %>
+                      <%= f.label :websterpak, "YES" %>
+                       <%= f.check_box :websterpak, { checked: false }, 'NO', 'YES'  %>
+                        <%= f.label :websterpak, "NO" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleInputifany">If no, list any medication sent with resident if any:</label>
+                        <%= f.text_field :medication_sent, :class => "form-control", placeholder:"If no, list any medication sent with resident if any:" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleInputlast">Last time Medication given</label>
+                        <%= f.text_field :last_time_medication, :class => "form-control", placeholder:"Last time Medication given" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputreport">Accompanying Reports</label>
+                       <%= f.text_field :accompanying_reports, :class => "form-control", placeholder:"Accompanying Reports" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputnext">Next</label>
+                       <%= f.text_field :next, :class => "form-control", placeholder:"Next" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputtransfer">Has been advised of the transfer</label>
+                        <%= f.check_box :advised, { checked: false }, 'No', 'YES'  %>
+                      <%= f.label :advised, "YES" %>
+                       <%= f.check_box :advised, { checked: false }, 'NO', 'YES'  %>
+                        <%= f.label :advised, "NO" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputguardian">Guardian</label>
+                       <%= f.text_field :guardian, :class => "form-control", placeholder:"Guardian" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputtransfer">Has been advised of the transfer</label>
+                        <%= f.check_box :guardian_advised, { checked: false }, 'No', 'YES'  %>
+                      <%= f.label :guardian_advised, "YES" %>
+                       <%= f.check_box :guardian_advised, { checked: false }, 'NO', 'YES'  %>
+                        <%= f.label :guardian_advised, "NO" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputcase">Case Manager</label>
+                       <%= f.text_field :case_manager, :class => "form-control", placeholder:"Case Manager" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputtransfer">Has been advised of the transfer</label>
+                        <%= f.check_box :case_manager_advised, { checked: false }, 'No', 'YES'  %>
+                      <%= f.label :case_manager_advised, "YES" %>
+                       <%= f.check_box :case_manager_advised, { checked: false }, 'NO', 'YES'  %>
+                        <%= f.label :case_manager_advised, "NO" %>
+                      </div>
+                       <div class="form-group">
+                        <label for="exampleInputperson">Person Nominated</label>
+                       <%= f.text_field :nomini, :class => "form-control", placeholder:"Person Nominated" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputtransfer">Has been advised of the transfer</label>
+                        <%= f.check_box :nomini_advised, { checked: false }, 'No', 'YES'  %>
+                      <%= f.label :nomini_advised, "YES" %>
+                       <%= f.check_box :nomini_advised, { checked: false }, 'NO', 'YES'  %>
+                        <%= f.label :nomini_advised, "NO" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputadmin">Administrator</label>
+                       <%= f.text_field :admin, :class => "form-control", placeholder:"Administrator" %>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputtransfer">Has been advised of the transfer</label>
+                        <%= f.check_box :admin_advised, { checked: false }, 'No', 'YES'  %>
+                      <%= f.label :admin_advised, "YES" %>
+                       <%= f.check_box :admin_advised, { checked: false }, 'NO', 'YES'  %>
+                        <%= f.label :admin_advised, "NO" %>
+                      </div>
+                      <button type="submit" class="btn btn-primary mr-2"> Submit </button>
+                      <button class="btn btn-light">Cancel</button>
+                   <% end %>   
