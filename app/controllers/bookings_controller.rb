@@ -3,6 +3,8 @@ class BookingsController < BaseController
 
   #authenticate if user logged.
   before_action :authenticate_user!
+  include TableSettings::BookingsTs
+  before_action :configure_booking_table_settings
 
 	def index
    	@page_title = "Bookings | Home"

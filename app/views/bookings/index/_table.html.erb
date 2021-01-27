@@ -1,0 +1,34 @@
+<table class="table table-hover table-custom spacing8" id="book_listing_table">
+            <thead>
+              <tr>
+                <% @table_settings.each do |code, col_data| %>
+                  <% if code.to_s == "check_box" %>
+                    <th ><input type="checkbox" class="relative select_all_checkbox"></th>
+                  <% else %>
+                    <% th_attributes = col_data[:options].try(:[], :th_attributes) || {} %>
+                    <%= content_tag(:th, col_data[:name], th_attributes ) %>
+                  <% end %>
+                <% end %>
+              </tr>
+            </thead>
+          <tbody >
+            <% @bookings.each_with_index do |booking, i| %>
+              <tr id='bookings_ROW_<%= booking.id %>'>
+                <td>
+                  <span><%= i+1 %></span>
+                </td>
+                <td>
+                  <span style="align-items: center;"><%= booking.user_name %></span>
+                </td>
+                
+                <td>
+                  <span><%= booking.created_at.in_time_zone("Asia/Muscat").strftime('%d %B %Y, %H:%M') if booking.created_at %></span>
+                </td>
+                <td>
+                <%= link_to booking_path(booking),:method => :get, :class => "btn-success" do %><i class="fa fa-eye"></i><% end %><%= link_to edit_booking_path(booking), :method => :get, :remote => true, :class => "btn-success" do %><i class="fa fa-edit"></i><% end %><%= button_to booking_path(booking), :method => :delete, :remote => true, data: {confirm: "Are you sure you want to delete this?"}, :class => "btn-danger" do %><i class="fa fa-trash"></i><% end %>     </td>
+              </tr>
+            <% end %>
+          </tbody>
+          </table>  
+
+

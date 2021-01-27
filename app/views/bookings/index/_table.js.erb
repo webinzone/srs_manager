@@ -1,0 +1,65 @@
+// Partial template to load JS code for Data table and other general functionalities
+var $booksTable;
+function initialize_books_table(){
+  $booksTable = $('#book_listing_table').DataTable({
+    dom: 'Bfrtip',
+    buttons: [
+      {
+        extend: 'excel',
+        title: " Book As on <%= Date.today.strftime("%d/%b/%Y") %>",
+        exportOptions: {
+          columns: [0, 1, 2],
+        }
+      },
+      {
+        extend: 'csv',
+        title: "Book As on <%= Date.today.strftime("%d/%b/%Y") %>",
+        exportOptions: {
+          columns: [0 ,1 ,2],
+        }
+      }
+
+    ],
+    bInfo: false,
+    paging: true,
+    pageLength: 100,
+    responsive: true,
+    searching: true,
+    ordering: true,
+    
+
+    // These columns are set by the function configure_data_tables in the table_settings controller
+    "columnDefs": [
+       { width: "25%",className: "text-center", "targets": [ 0,2 ] },
+    ],
+    scrollY: "400px",
+    scrollX: true,
+    scrollCollapse: true,
+    fixedHeader: true,
+    fixedColumns: {
+      //leftColumns: 2,
+      //rightColumns: 1
+    }
+  });
+}
+
+$(document).ready(function() {
+  
+  // Initialize Datatables for Leave Request
+  initialize_books_table();
+
+  // Hide defaultly displayed Export butoon
+  $(".buttons-excel").hide()
+  $(".buttons-csv").hide()
+
+  // Export Button Events
+  $("#BOOK_TABLE_EXPORT_TO_EXCEL").on("click", function() {
+    $booksTable.button( '.buttons-excel' ).trigger();
+  });
+
+  $("#BOOK_TABLE_EXPORT_TO_CSV").on("click", function() {
+    $booksTable.button( '.buttons-csv' ).trigger();
+  });
+  // Export Button Events
+  
+});

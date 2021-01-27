@@ -6,12 +6,14 @@
           <%= link_to '+ Add New Booking', new_booking_path, :class =>"btn btn-success", :remote => true %>
         </div>
       </div>
+        <%= render partial: 'bookings/index/controls' %>
+
       <div class="row">
         <div class="col-12 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
               <div class="table-responsive">
-                <table class="table">
+               <!-- <table class="table">
                   <thead style="background-color: #1294a3; color: white;">
                     <tr>
                       <th>ID</th>
@@ -45,7 +47,11 @@
                       </tr>
                     <% end %>
                   </tbody>
-                </table>
+                </table>-->
+
+              <%= render partial: 'bookings/index/table' %>
+             
+
               </div>
             </div>
           </div>
@@ -55,3 +61,6 @@
 </div>
 
 
+ <%= content_for :javascript_footer do %>
+                <%= render :partial=>"bookings/index/table.js.erb"  %>
+              <% end %>
