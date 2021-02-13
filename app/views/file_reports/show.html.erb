@@ -1,0 +1,46 @@
+<div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><b>Reports</b></h3>
+               <div class="col-md-3">
+            <b><%= link_to '+New File Report', new_file_report_path, :class =>"btn btn-success", :remote => true %></b>
+  
+              </div>
+             
+            </div>
+           <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+               
+    <div class="card" style="width: 25rem; background-color: #b3f0ff;">
+        <div class="card-header">
+          Uploaded By : <b><%= @file_report.user_name %></b>
+          
+        </div>
+       <div class="card-body">
+        <p class="card-text">User Name : <%= @file_report.try(:user_name) %></p>
+        <p class="card-text">Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; <%= @file_report.try(:tittle) %></p>
+        <p class="card-text">Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; <%= @file_report.try(:desc) %></p>
+        <p class="card-text">File Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; <%= @file_report.file_name.split("/").last %><%= link_to "/uploads/#{@file_report.file_name.split("/").last}", class: "btn btn-sm btn-default" do %>
+         <i class="fa fa-download" title="Download File" data-toggle= 'tooltip', data-placement='top'></i>
+        <% end %></p>
+         <%#= link_to @file_report.file_name.split("/").last, @file_report %>
+        
+      </div>
+      <div class="card-footer">
+        <div class="row">
+      <div class="col-6">
+        <a href="#" class="card-link"><%= @file_report.created_at.in_time_zone("Asia/Muscat").strftime('%d %B %Y, %H:%M') %></a>
+      </div>
+        <div class="col-2">
+          <%= button_to file_report_path(@file_report), :method => :delete, :remote => true, data: {confirm: "Are you sure you want to delete this?"}, :class => "btn btn-primary" do %><i class="fa fa-trash"></i><% end %>
+          </div>
+          </div>
+          
+       </div>
+      </div>
+
+              </div>
+          </div>
+        </div>
+      </div>
+

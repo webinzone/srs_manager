@@ -1,0 +1,77 @@
+﻿Convert a Static HTML Website to a Ruby on       Rails Web Application
+
+                
+    • Create a new app
+       
+              Open the terminal and type the command below:
+                $ rails new appname
+      
+    • Add gems
+      
+             Open created app and open the gem file. Add the needed gems
+                      gem 'bootstrap-sass', '~> 3.3.4'
+                      gem 'font-awesome-sass', '~> 4.3.0'
+                      gem 'jquery-ui-rails'
+
+    • Install bundle
+      
+          Open the terminal and install the added gems :
+                   $bundle install
+      
+    • Define a route
+      
+           Open the app->config and add a new route :
+                  root 'pages#index'
+      
+    • Create Controller
+      
+               open app -> controller -> new file and add the below code on the 
+               new controller.
+                 class WebController < ApplicationController
+                 
+                  end
+      
+    • Define An action 
+      
+                  After creating a controller, define a function :
+                  def index
+                      end
+
+    • Load custom css and java scripts for the app
+      
+    • Load css to the directory stylesheets 
+      open app->assets->stylesheets  
+    • Import files here 
+      open app->assets->stylesheets->application.css
+          *= require style.css
+          *= require responsive.css
+    • Load js and sripts to the directory javascripts 
+      open app->assets->javascripts  
+    • Import files here 
+      open app->assets->javascripts->application.js
+          //= require jquery
+          //= require jquery.min.js                                           
+                           
+    • Create views
+               open views and create new files. create maximum partials.
+                 app->views->new.html.erb
+               create comon layouts app->views->layouts
+                 
+    • Call the css and js file on the default layout.
+       
+<html>
+<head>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+</head>
+<body>
+<%= yield %>
+</body>
+</html>
+      
+    • Start the server 
+      
+                   Open terminal and type
+                    $ rails s
+           

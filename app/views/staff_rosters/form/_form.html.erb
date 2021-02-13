@@ -1,0 +1,50 @@
+<%= form_with(model: @staff_roster, remote: true , class: "forms-sample") do |f| %>
+  <div class="form-group">
+    <label for="exampleInputdate1">Date</label>
+   <%= f.text_field :date, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"Date" %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputstaffm">Staff Member</label>
+    <%= f.text_field :staff_name, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"Staff Member" %>
+  <div class="form-group">
+    <label for="exampleInputpposition">Position</label>
+    <%= f.text_field :position, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"Position" %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputmonday">Monday</label>
+    <%= f.text_field :monday, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"Monday" %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputtuesday">Tuesday</label>
+    <%= f.text_field :tuesday, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"Tuesday" %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputwednsday">Wednsday</label>
+    <%= f.text_field :wednesday, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"Wednsday" %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputthursday">Thursday</label>
+    <%= f.text_field :thursday, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"Thursday" %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputfriday">Friday</label>
+    <%= f.text_field :friday, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"Friday" %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputstaurday">Saturday</label>
+    <%= f.text_field :saturday, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"Saturday" %>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputsunday">Sunday</label>
+    <%= f.text_field :sunday, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"Sunday" %>
+  </div>
+   <div class="form-group">
+    <label for="exampleInputhours">Total Hrs</label>
+    <%= f.text_field :total_hrs, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"Total Hrs" %>
+  </div>
+   <label for="exampleInputtotal">Total</label>
+    <%= f.text_field :total, autofocus: true, autocomplete: "complaint", :class => "form-control", placeholder:"Total" %>
+  </div>
+  <button type="submit" class="btn btn-primary mr-2"> Submit </button>
+  <button class="btn btn-light">Cancel</button>                     
+<% end %>  

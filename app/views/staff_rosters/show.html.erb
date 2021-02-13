@@ -1,0 +1,89 @@
+<div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><b>Staff Roaster</b></h3>
+               <div class="col-md-4">
+            <%= link_to '+ Add New Staff Roaster', new_staff_roster_path, :class =>"btn btn-success", :remote => true %>
+  
+              </div>
+             
+            </div>
+           <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                   
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead style="background-color: #1294a3; color: white;">
+                          <tr>
+                            
+                            <th>Date</th>
+                            
+                            <th>Position</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                            <th>Saturday</th>
+                            <th>Sunday</th>
+                            <th>Total Hrs</th>
+                            <th>Total</th>
+                           
+                           </tr>
+                        </thead>
+                        
+    <tbody >
+      
+        <tr >
+          
+          <td>
+            <span><%= @staff_roster.date %></span>
+          </td>
+          
+          <td>
+            <span><%= @staff_roster.position %></span>
+          </td>
+          <td>
+            <span><%= @staff_roster.monday %></span>
+          </td>
+          <td>
+            <span><%= @staff_roster.tuesday %></span>
+          </td>
+          <td>
+            <span><%= @staff_roster.wednesday %></span>
+          </td>
+          <td>
+            <span><%= @staff_roster.thursday %></span>
+          </td>
+          <td>
+            <span><%= @staff_roster.friday %></span>
+          </td>
+          <td>
+            <span><%= @staff_roster.saturday %></span>
+          </td>
+          <td>
+            <span><%= @staff_roster.sunday %></span>
+          </td>
+          <td>
+            <span><%= @staff_roster.total_hrs %></span>
+          </td>
+          <td>
+            <span><%= @staff_roster.total %></span>
+          </td>
+          
+          
+          
+        </tr>
+      
+    </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+

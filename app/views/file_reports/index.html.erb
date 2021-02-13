@@ -1,0 +1,59 @@
+<div class="main-panel">
+          <div class="content-wrapper">
+            <div class="page-header">
+              <h3 class="page-title"><b>Reports</b></h3>
+               <div class="col-md-4">
+            <%= link_to '+ Add New File Report', new_file_report_path, :class =>"btn btn-success", :remote => true %>
+  
+              </div>
+             
+            </div>
+           <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                   
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead style="background-color: #1294a3; color: white;">
+                          <tr>
+                            <th>ID</th>
+                            <th>Uploaded By</th>
+                            <th>Created_at</th>
+                            <th style="align-content: center;">Action</th>
+                            <th></th>
+                              <th></th>
+                          </tr>
+                        </thead>
+                        
+    <tbody >
+      <% @file_reports.each_with_index do |file_report, i| %>
+        <tr id='file_reports_ROW_<%= file_report.id %>'>
+          <td>
+            <span><%= i+1 %></span>
+          </td>
+          <td>
+            <span><%= file_report.user_name %></span>
+          </td>
+          
+          <td>
+            <span><%= file_report.created_at.in_time_zone("Asia/Muscat").strftime('%d %B %Y, %H:%M') if file_report.created_at %></span>
+          </td>
+          <td>
+            <%= button_to file_report_path(file_report),:method => :get, :class => "btn-success" do %><i class="fa fa-eye"></i><% end %></td>
+            <td><%= button_to edit_file_report_path(file_report), :method => :get, :remote => true, :class => "btn-success" do %><i class="fa fa-edit"></i><% end %></td>
+            <td><%= button_to file_report_path(file_report), :method => :delete, :remote => true, data: {confirm: "Are you sure you want to delete this?"}, :class => "btn-danger" do %><i class="fa fa-trash"></i><% end %>
+           
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+

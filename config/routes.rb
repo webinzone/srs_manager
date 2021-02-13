@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :srs_referals 
   resources :profile 
   resources :transfer_details 
-
+  resources :file_reports
+  resources :staff_rosters
 
 end

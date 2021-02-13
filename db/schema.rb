@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_15_114216) do
+ActiveRecord::Schema.define(version: 2021_02_05_070720) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -70,6 +70,15 @@ ActiveRecord::Schema.define(version: 2021_01_15_114216) do
     t.datetime "updated_at", null: false
     t.string "user_name"
     t.index ["user_id"], name: "index_complaints_on_user_id"
+  end
+
+  create_table "file_reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "user_name", default: "", null: false
+    t.string "tittle", default: "", null: false
+    t.string "desc", default: "", null: false
+    t.string "file_name", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "incident_reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -166,6 +175,23 @@ ActiveRecord::Schema.define(version: 2021_01_15_114216) do
     t.string "religous", default: "", null: false
     t.string "nationality", default: "", null: false
     t.string "diagnosis", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "staff_rosters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "date", default: "", null: false
+    t.string "staff_name", default: "", null: false
+    t.string "position", default: "", null: false
+    t.string "monday", default: "", null: false
+    t.string "tuesday", default: "", null: false
+    t.string "wednesday", default: "", null: false
+    t.string "thursday", default: "", null: false
+    t.string "friday", default: "", null: false
+    t.string "saturday", default: "", null: false
+    t.string "sunday", default: "", null: false
+    t.string "total_hrs", default: "", null: false
+    t.string "total", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
