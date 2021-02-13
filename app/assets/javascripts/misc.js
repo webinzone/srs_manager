@@ -60,10 +60,10 @@
       //Applying perfect scrollbar
       if (!body.hasClass("rtl")) {
         if ($('.settings-panel .tab-content .tab-pane.scroll-wrapper').length) {
-          const settingsPanelScroll = new PerfectScrollbar('.settings-panel .tab-content .tab-pane.scroll-wrapper');
+          //const settingsPanelScroll = new PerfectScrollbar('.settings-panel .tab-content .tab-pane.scroll-wrapper');
         }
         if ($('.chats').length) {
-          const chatsScroll = new PerfectScrollbar('.chats');
+         // const chatsScroll = new PerfectScrollbar('.chats');
         }
         if (body.hasClass("sidebar-fixed")) {
           var fixedSidebarScroll = new PerfectScrollbar('#sidebar .nav');
