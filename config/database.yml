@@ -1,35 +1,27 @@
 development:
-  adapter: mysql2
-  encoding: utf8
-  database: srs_demo_development
+  adapter: postgresql
+  encoding: unicode
   username: root
- #password: 
-  port: 3306
+  password: root
+  pool: 5
+  timeout: 5000
   host: localhost
-
+  database: auth_client_api_development
 test:
-  adapter: mysql2
-  encoding: utf8
-  database: srs_demo_test
+  adapter: postgresql
+  encoding: unicode
   username: root
-  # password: 
-  port: 3306
+  password: root
+  pool: 5
+  timeout: 5000
   host: localhost
-
-staging:
-  adapter: mysql2
-  encoding: utf8
-  database: srs_demo_staging
-  username: root
-  # password: 
-  port: 3306
-  host: localhost
-
+  database: auth_client_api_test
 production:
-  adapter: mysql2
-  encoding: utf8
-  database: srs_demo_production
-  username: root
-  # password: 
-  port: 3306
+  adapter: postgresql
+  encoding: unicode
+  username: 
+  password: 
+  pool: 5
+  timeout: 5000
   host: localhost
+  database: auth_client_api_production

@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2021_02_05_070720) do
 
-  create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_070720) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "active_storage_blobs", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -33,7 +36,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_070720) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "bookings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "bookings", force: :cascade do |t|
     t.string "user_name", default: "", null: false
     t.string "book_from", default: "", null: false
     t.string "book_to", default: "", null: false
@@ -60,7 +63,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_070720) do
     t.string "fee_freq"
   end
 
-  create_table "complaints", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "complaints", force: :cascade do |t|
     t.bigint "user_id"
     t.string "complaint", default: "", null: false
     t.string "nature", default: "", null: false
@@ -72,7 +75,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_070720) do
     t.index ["user_id"], name: "index_complaints_on_user_id"
   end
 
-  create_table "file_reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "file_reports", force: :cascade do |t|
     t.string "user_name", default: "", null: false
     t.string "tittle", default: "", null: false
     t.string "desc", default: "", null: false
@@ -81,9 +84,9 @@ ActiveRecord::Schema.define(version: 2021_02_05_070720) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "incident_reports", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "incident_reports", force: :cascade do |t|
     t.string "user_name", default: "", null: false
-    t.string "incident_type", limit: 256
+    t.string "incident_type", default: "", null: false
     t.string "other_type", default: "", null: false
     t.string "description", default: "", null: false
     t.string "action", default: "", null: false
@@ -96,7 +99,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_070720) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "residents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "residents", force: :cascade do |t|
     t.string "surname", default: "", null: false
     t.string "fname", default: "", null: false
     t.string "mname", default: "", null: false
@@ -125,7 +128,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_070720) do
     t.text "image"
   end
 
-  create_table "residents_agreements", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "residents_agreements", force: :cascade do |t|
     t.string "user_name", default: "", null: false
     t.string "room_no", default: "", null: false
     t.string "bed", default: "", null: false
@@ -151,7 +154,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_070720) do
     t.string "special_items"
   end
 
-  create_table "srs_referals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "srs_referals", force: :cascade do |t|
     t.string "user_name", default: "", null: false
     t.string "address", default: "", null: false
     t.string "telephone", default: "", null: false
@@ -179,7 +182,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_070720) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "staff_rosters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "staff_rosters", force: :cascade do |t|
     t.string "date", default: "", null: false
     t.string "staff_name", default: "", null: false
     t.string "position", default: "", null: false
@@ -196,7 +199,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_070720) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "support_plans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "support_plans", force: :cascade do |t|
     t.string "user_name", default: "", null: false
     t.string "Hygiene", default: "", null: false
     t.string "nutrition", default: "", null: false
@@ -210,7 +213,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_070720) do
     t.string "mobility"
   end
 
-  create_table "transfer_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "transfer_details", force: :cascade do |t|
     t.string "user_name", default: "", null: false
     t.string "dob", default: "", null: false
     t.string "gender", default: "", null: false
@@ -247,7 +250,7 @@ ActiveRecord::Schema.define(version: 2021_02_05_070720) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
