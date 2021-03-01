@@ -4,7 +4,14 @@ class HomeController < BaseController
   #authenticate if user logged.
   before_action :authenticate_user!,except:[:new]
 
-	def index	
+	def index
+		@user_count = User.count
+		@bookings = Booking.count
+		@icreports = IncidentReport.count
+		@complaints = Complaint.count
+		@files = FileReport.count
+		@rsa = ResidentsAgreement.count
+
 	end
 	def menu	
 	end
