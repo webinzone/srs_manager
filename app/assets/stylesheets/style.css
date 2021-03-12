@@ -8993,7 +8993,7 @@ button.bg-dark:focus,
 .mx-n2 {
   margin-left: -0.5rem !important; }
 
-.m-n3 {
+.m-n3 {.
   margin: -1rem !important; }
 
 .mt-n3,
@@ -10944,8 +10944,11 @@ code {
 
 /* Footer */
 .footer {
-  background: #f2f2f2;
-  padding: 8px 40px 37px 40px;
+  position: absolute;
+  background: black;
+  padding: 8px 40px;
+  padding-left: 500px;
+  width: 100%;
   transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -webkit-transition: all 0.25s ease;
@@ -10954,7 +10957,7 @@ code {
   font-family: "Rubik", sans-serif;
   font-weight: 400; }
   .footer a {
-    color: #00cccd;
+    color: white;
     font-size: inherit; }
   @media (max-width: 576px) {
     .footer {
@@ -14889,6 +14892,7 @@ dl {
   font-family: "Rubik", sans-serif;
   padding: 0;
   width: 260px;
+  height: 1000px;
   z-index: 11;
   transition: width 0.25s ease, background 0.25s ease;
   -webkit-transition: width 0.25s ease, background 0.25s ease;

@@ -12,17 +12,17 @@
               </div>-->
             </div>
             <div class="row">              
-                <div class="card" style="width: 1000px; height: 600px">
+                <div class="card" style="width: 1000px; height: 600px; padding-bottom: 10px;">
                   <div class="card-body">
                     <div class="row">
                       <div class="col-sm-7">
                         <h5>SRS MANAGER</h5>
-                        <p class="text-muted"> Show overview jan 2019 - Dec 2020 <a class="text-muted font-weight-medium pl-2" href="#"><u>See Details</u></a>
+                        <!--<p class="text-muted"> Show overview jan 2019 - Dec 2020 <a class="text-muted font-weight-medium pl-2" href="#"><u>See Details</u></a>
                         </p>
                       </div>
                       <div class="col-sm-5 text-md-right">
                         <button type="button" class="btn btn-icon-text mb-3 mb-sm-0 btn-inverse-primary font-weight-normal">
-                          <i class="mdi mdi-email btn-icon-prepend"></i>Download Report </button>
+                          <i class="mdi mdi-email btn-icon-prepend"></i>Download Report </button>-->
                       </div>
                     </div>
                     <div class="row">
@@ -73,9 +73,9 @@
                       </div><br><br>
                        <div class="row">
                       <div class="col-sm-4">
-                        <div class="card mb-3 mb-sm-0">
+                        <div class="card mb-3 mb-sm-0" style="background-color: #d926d9 ; color: white;">
                           <div class="card-body py-3 px-4">
-                            <p class="m-0 survey-head">Complaints</p>
+                            <p class="m-0 survey-head" style="color: white;">Complaints</p>
                             <div class="d-flex justify-content-between align-items-end flot-bar-wrapper">
                               <div>
                                 <h3 class="m-0 survey-value"> <%= @complaints %></h3>
@@ -87,9 +87,9 @@
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="card mb-3 mb-sm-0">
+                        <div class="card mb-3 mb-sm-0" style="background-color: #A569BD ; color: white;">
                           <div class="card-body py-3 px-4">
-                            <p class="m-0 survey-head">Files</p>
+                            <p class="m-0 survey-head" style="color: white;">Files</p>
                             <div class="d-flex justify-content-between align-items-end flot-bar-wrapper">
                               <div>
                                 <h3 class="m-0 survey-value"> <%= @files %></h3>
@@ -99,9 +99,9 @@
                         </div>
                       </div>
                       <div class="col-sm-4">
-                        <div class="card">
+                        <div class="card" style="background-color: #CB4335 ; color: white;">
                           <div class="card-body py-3 px-4">
-                            <p class="m-0 survey-head">RSA</p>
+                            <p class="m-0 survey-head" style="color: white;">RSA</p>
                             <div class="d-flex justify-content-between align-items-end flot-bar-wrapper">
                               <div>
                                 <h3 class="m-0 survey-value"> <%= @rsa %></h3>
@@ -110,13 +110,25 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div><br><br>
+
+                    <h5><b>Why SRS Manager Software ?</b></h5>
+                     <p style="color: #7F8C8D;">Support Plan Review 6 month countdown and reminder ,
+                      Multiple staff logins with varying permissions ,
+                      AO and community visitor login for easy accessed areas ,
+                      Forms designed with familiarity of existing paperwork & easy of use ,
+                      Easy referencing, archiving & residents easily discharged and returned ,
+                      Refrence directly from database & print for filing ensures a smoother transition from previous system ,
+                      Offsite backups ensure data is always secured and free from total loss, even more so than paper based ,
+                      Improved communication around resident care and changes ,
+                      Network ready for multiple computers ,
+                      Time saved & continuity of data being entered once then populated throughout other forms ,
+                      Easier understanding & confidence in compliance to regulations
+                      Appointments, contacts, invoicing, writing letters, writing in staff communication, referencing any information or history all done in one place instead of multiple books, files or programs.</p> 
+                    
 
                     </div>
                     
-                    <div class="row">
-                      
-                    </div>
                   </div>
                 </div>
 
@@ -126,7 +138,7 @@
             </div>
           </div>
 
-          
+         
                 <!--browser stats ends-->
               </div>
             </div>
